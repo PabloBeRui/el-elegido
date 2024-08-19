@@ -7,3 +7,7 @@ npm install @mui/material @emotion/react @emotion/styled
 Instalo la biblioteca de iconos de mui
 
 npm install @mui/icons-material
+
+
+Instalo la biblioteca react-slick y sus dependencias de estilo slick-carousel, para crear un carrusel de imágenes
+npm install react-slick slick-carousel

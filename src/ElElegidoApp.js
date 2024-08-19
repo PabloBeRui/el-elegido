@@ -13,12 +13,16 @@ import { HouseSpecialties } from "./components/HouseSpecialties";
 import { OurRestaurant } from "./components/OurRestaurant";
 import { OurMenu } from "./components/OurMenu";
 
+//importo globalmente  react-slick (que depende de las hojas de estilo de slick-carousel para funcionar correctamente), requerido para su correcto funcionamiento.
+
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
 function ElElegidoApp() {
   return (
     <div>
       <Router>
         <NavMenu />
-        <h1>ElElegidoApp</h1>
         <Routes>
           {/*Cargo por defecto la ruta OurRestaurant  */}
           <Route index element={<OurRestaurant />} />
