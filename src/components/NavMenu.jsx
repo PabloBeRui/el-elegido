@@ -31,7 +31,7 @@ export const NavMenu = () => {
 
   // creo una función de orden superior que actualiza el estado de drawerOpen a través de setDrawerOpen. Su parámetro "open" será true o false para abrir o cerrar el menú deslizante.
 
-  const toggleDrawer = (open) => (event) => {
+  const toggleDrawer = (open) => () => {
     setDrawerOpen(open);
   };
 
