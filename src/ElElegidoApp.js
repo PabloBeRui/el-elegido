@@ -22,11 +22,11 @@ function ElElegidoApp() {
         <Routes>
           {/*Cargo por defecto la ruta OurRestaurant  */}
           <Route index element={<OurRestaurant />} />
-          <Route path="/GroupMenu" element={<GroupMenu />} />
-          <Route path="/HouseSpecialties" element={<HouseSpecialties />} />
-          <Route path="/OurRestaurant" element={<OurRestaurant />} />
-          <Route path="/Reservations" element={<Reservations />} />
-          <Route path="/OurMenu" element={<OurMenu />} />
+          <Route path="/group-menu" element={<GroupMenu />} />
+          <Route path="/house-specialties" element={<HouseSpecialties />} />
+          <Route path="/our-restaurant" element={<OurRestaurant />} />
+          <Route path="/reservations" element={<Reservations />} />
+          <Route path="/our-menu" element={<OurMenu />} />
         </Routes>
         <Footer />
       </Router>

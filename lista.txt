@@ -1,4 +1,9 @@
 Instalado react-router-dom
 
-instalo Material Design
+Instalado  MUI (conocido anteriormente por Material-ui), una biblioteca de componentes de interfaz de usuario diseñada para react
 
+npm install @mui/material @emotion/react @emotion/styled
+
+Instalo la biblioteca de iconos de mui
+
+npm install @mui/icons-material
