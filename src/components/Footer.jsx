@@ -10,11 +10,11 @@ import {
   ListItemText,
   Typography,
 } from "@mui/material";
-import MenuIcon from "@mui/icons-material/Menu";
 import { useMediaQuery, useTheme } from "@mui/material";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import MailIcon from "@mui/icons-material/Mail";
+import PolicyIcon from '@mui/icons-material/Policy';
 
 //REACT
 import { useState } from "react";
@@ -79,7 +79,7 @@ export const Footer = () => {
             <>
               {/* IconButton que abre el menú de */}
               <IconButton color="inherit" onClick={toggleDrawer(true)}>
-                <MenuIcon /> {/* !TODO CAMBIAR ICONO  */}
+                <PolicyIcon /> 
               </IconButton>
               {/* Renderizo el menú deslizante*/}
               {mobileMenu}
