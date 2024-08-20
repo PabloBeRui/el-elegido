@@ -14,7 +14,7 @@ import { useMediaQuery, useTheme } from "@mui/material";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import MailIcon from "@mui/icons-material/Mail";
-import PolicyIcon from '@mui/icons-material/Policy';
+import PolicyIcon from "@mui/icons-material/Policy";
 
 //REACT
 import { useState } from "react";
@@ -44,15 +44,15 @@ export const Footer = () => {
       <List>
         {/* Cada ListItem es un botón dentro del menú deslizante */}
         <ListItem button>
-          <ListItemText primary="Privacy Policy" />{" "}
+          <ListItemText primary="Política de Privacidad" />{" "}
           {/* Texto que indica la Política de Privacidad */}
         </ListItem>
         <ListItem button>
-          <ListItemText primary="Legal Notice" />{" "}
+          <ListItemText primary="Aviso Legal" />{" "}
           {/* Texto que indica el Aviso Legal */}
         </ListItem>
         <ListItem button>
-          <ListItemText primary="Cookies Policy" />{" "}
+          <ListItemText primary="Política de Cookies" />{" "}
           {/* Texto que indica la Política de Cookies */}
         </ListItem>
       </List>
@@ -70,8 +70,9 @@ export const Footer = () => {
       <Box
         sx={{
           display: "flex",
-          justifyContent: "space-around",
-          padding: "20px",
+          justifyContent: "space-between",
+          alignItems: "center",
+          padding: "5px",
         }}>
         {/* Seccion 1 - Menu*/}
         <Box>
@@ -79,7 +80,7 @@ export const Footer = () => {
             <>
               {/* IconButton que abre el menú de */}
               <IconButton color="inherit" onClick={toggleDrawer(true)}>
-                <PolicyIcon /> 
+                <PolicyIcon />
               </IconButton>
               {/* Renderizo el menú deslizante*/}
               {mobileMenu}
@@ -89,7 +90,7 @@ export const Footer = () => {
             <>
               <Button color="inherit">Política de Privacidad</Button>
               <Button color="inherit">Aviso Legal</Button>
-              <Button color="inherit">Pol´tica de Cookies</Button>
+              <Button color="inherit">Política de Cookies</Button>
             </>
           )}
         </Box>

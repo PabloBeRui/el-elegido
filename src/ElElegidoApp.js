@@ -21,26 +21,38 @@ import { Box } from "@mui/material";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-
 function ElElegidoApp() {
   return (
-    <div>
-
-      {/* Voy a encapsular cada componente en un Box para poder aplicar estilos de MUI */ }
-      <Router> <Box sx={{ height: "20vh" }}> <NavMenu /></Box>
-       <Box sx={{ height: "70vh", overflowY: "auto" }}><Routes>
-          {/*Cargo por defecto la ruta OurRestaurant  */}
-          <Route index element={<OurRestaurant />} />
-          <Route path="/group-menu" element={<GroupMenu />} />
-          <Route path="/house-specialties" element={<HouseSpecialties />} />
-          <Route path="/our-restaurant" element={<OurRestaurant />} />
-          <Route path="/reservations" element={<Reservations />} />
-          <Route path="/our-menu" element={<OurMenu />} />
-        </Routes></Box>
-        <Box sx={{ height: "10vh"}}><Footer /></Box>
-        
+    <Box
+      id="app-box"
+      sx={{
+        height: "100vh",
+        display: "flex",
+        flexDirection: "column",
+      }}>
+      {/* Voy a encapsular cada componente en un Box para poder aplicar estilos de MUI */}
+      <Router>
+        {" "}
+        <Box sx={{ height: "20vh", flexShrink: 0 }}>
+          {" "}
+          <NavMenu />
+        </Box>
+        <Box sx={{ flexGrow: 1, overflowY: "auto" }}>
+          <Routes>
+            {/*Cargo por defecto la ruta OurRestaurant  */}
+            <Route index element={<OurRestaurant />} />
+            <Route path="/group-menu" element={<GroupMenu />} />
+            <Route path="/house-specialties" element={<HouseSpecialties />} />
+            <Route path="/our-restaurant" element={<OurRestaurant />} />
+            <Route path="/reservations" element={<Reservations />} />
+            <Route path="/our-menu" element={<OurMenu />} />
+          </Routes>
+        </Box>
+        <Box sx={{ flexShrink: 0, marginTop: "5vh" }}>
+          <Footer />
+        </Box>
       </Router>
-    </div>
+    </Box>
   );
 }
 
