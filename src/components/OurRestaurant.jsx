@@ -27,13 +27,17 @@ const sliderSettings = {
   autoplaySpeed: 3000, // Tiempo entre cada desplazamiento automático (en milisegundos, 3 segundos)
 };
 
+// Creo una variable con los valores sx de Box
+
+const sxBoxSettings = { width: "80%", margin: "0 auto", paddingTop: "20px" };
+
 export const OurRestaurant = () => {
    // Llamo a la función createArrayImages para generareln array de rutas de imágenes y lo almaceno en la variable images
    const images = createArrayImages(5);
 
    return (
-     // Creo un Box de Material-UI y le aplico estilos con su propiedad sx para manejar el layout y centrar el carrusel en la página
-     <Box sx={{ width: "80%", margin: "0 auto", paddingTop: "20px" }}>
+     // Creo un Box de Material-UI y le aplico estilos con su propiedad sx y los valores de mi variable para manejar el layout y centrar el carrusel en la página
+     <Box sx={sxBoxSettings}>
        {/* 
       Creo el componente Slider de react-slick para crear el carrusel.
        Le pasao la configuración del carrusel (sliderSettings) con un spread operator 
