@@ -11,3 +11,29 @@ npm install @mui/icons-material
 
 Instalo la biblioteca react-slick y sus dependencias de estilo slick-carousel, para crear un carrusel de imágenes
 npm install react-slick slick-carousel
+
+Explicacion componentes MUI:
+
+// Importamos los componentes de Material-UI que necesitamos para construir el footer
+import {
+  AppBar,        // El AppBar es una barra de aplicaciones que normalmente se usa para encabezados, pero también podemos usarlo para el footer.
+  Box,           // Box es un contenedor flexible que puede manejar el layout, actuar como un div mejorado.
+  Button,        // Button es un botón estilizado de Material-UI.
+  IconButton,    // IconButton es un botón que muestra un ícono, en este caso se usará para los íconos de contacto.
+  Drawer,        // Drawer es un componente de Material-UI que nos permite mostrar menús deslizantes desde los bordes de la pantalla.
+  List,          // List es un contenedor para listas de ítems.
+  ListItem,      // ListItem es un ítem dentro de una lista.
+  ListItemText,  // ListItemText muestra el texto dentro de un ListItem.
+  Typography,    // Typography es el componente que usamos para manejar el texto y su estilo.
+} from "@mui/material";
+
+// Importamos íconos específicos de Material-UI
+import MenuIcon from "@mui/icons-material/Menu"; // Ícono de menú de hamburguesa.
+import InstagramIcon from "@mui/icons-material/Instagram"; // Ícono de Instagram.
+import WhatsAppIcon from "@mui/icons-material/WhatsApp";   // Ícono de WhatsApp.
+import MailIcon from "@mui/icons-material/Mail";           // Ícono de Correo Electrónico.
+// Aquí suponemos que hay un ícono para TikTok (si no está en la librería de Material-UI, tendrías que añadirlo manualmente).
+import TiktokIcon from "@mui/icons-material/Tiktok";
+
+// Importamos los hooks de Material-UI
+import { useMediaQuery, useTheme } from "@mui/material"; // Estos hooks nos permiten detectar el tamaño de la pantalla y acceder al tema.

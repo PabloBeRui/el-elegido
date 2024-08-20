@@ -16,7 +16,17 @@ const sliderSettings = {
 
 // Creo una variable con los valores sx de Box
 
-const sxBoxSettings = { width: "80%", margin: "0 auto", paddingTop: "20px" };
+const sxBoxSettings = {
+  width: {
+    xs: "90%", // Móviles
+    sm: "80%", // Tablets
+    md: "70%", // Laptops pequeñas
+    lg: "60%", // Escritorio estándar
+    xl: "50%", // Escritorios grandes
+  },
+  margin: "0 auto", // Centra horizontalmente el Box
+  paddingTop: "20px", // Espacio en la parte superior
+};
 
 export const OurRestaurant = () => {
   // Genero un array de rutas de imágenes usando la función createArrayImagesOurRestaurant
