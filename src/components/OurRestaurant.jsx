@@ -37,10 +37,10 @@ export const OurRestaurant = () => {
     <Box sx={sxBoxSettings}>
       <Typography
         sx={sxBoxSettings}
-        variant="h4"
+        variant="h5"
         align="center"
         color="primary">
-        El arte de comer bien
+        "El Arte de Comer Bien"
       </Typography>
       {/* Creo un Box de Material-UI y le aplico estilos con su propiedad sx y los valores de mi variable para manejar el layout y centrar el carrusel en la página*/}
       <Box sx={sxBoxSettings} >

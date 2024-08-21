@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 // Importo los componentes de Material-UI que voy a usar.
 import {
   AppBar,
+  Box,
   Toolbar,
   IconButton,
   Drawer,
@@ -14,6 +15,7 @@ import {
   Button,
 } from "@mui/material";
 // Importo el ícono de menú de hamburguesa (MenuIcon) de Material-UI.
+import FlatwareIcon from "@mui/icons-material/Flatware";
 import MenuIcon from "@mui/icons-material/Menu";
 // Importo los hooks useMediaQuery y useTheme para detectar el tamaño de pantalla y para configurar el tema,tambien de Material-UI
 import { useMediaQuery, useTheme } from "@mui/material";
@@ -112,7 +114,12 @@ export const NavMenu = () => {
       <Toolbar>
         {/*Compruebo el tamaño de la pantalla. Si es móvil, se muestra el menú de hamburguesa, en caso contrario , el desktopMenu */}
         {isMobile ? (
-          <>
+          <Box
+            sx={{
+              display: "flex",
+              justifyContent: "space-between",
+              alignItems: "center",
+            }}>
             {/* IconButton es el botón de hamburguesa que abre el menú deslizante en dispositivos móviles */}
             <IconButton
               edge="start"
@@ -120,29 +127,48 @@ export const NavMenu = () => {
               aria-label="menu"
               onClick={toggleDrawer(true)}>
               {/* MenuIcon es el ícono de las tres líneas (hamburguesa) */}
-              <MenuIcon />
+              <FlatwareIcon />
             </IconButton>
+
             {/* -Typography se usa para mostrar el nombre del restaurante en la barra de navegación 
             -La propiedad variant define el estilo tipográfico que se aplicará al texto
             -Con el component="div" el h6 se renderizará como un div
-             -La propiedad sx es una manera de aplicar estilos en línea utilizando el sistema de estilo de MUI
-             en este caso flexgrow:1 el ellemnto ocupará todo el espacio disponible en toolbar
+            
             */}
-            <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-              El Elegido
+            <Typography variant="h6" component="div">
+              El Elegido Restaurant
             </Typography>
+            {/* Añado el logo del local, en formato box para maximizar el uso de mui */}
+            <Box
+              component="img"
+              src="media/images/NavMenu/logo_el_elegido.png"
+              alt="description"
+              sx={{ width: "10%", height: "auto", borderRadius: 2 }}
+            />
             {/* Renderizo mobileMenu */}
             {mobileMenu}
-          </>
+          </Box>
         ) : (
           // Pantallas grandes
-          <>
-            <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+          <Box
+            sx={{
+              display: "flex",
+              justifyContent: "space-between",
+              alignItems: "center",
+            }}>
+            {/* Añado el logo del local, en formato box para maximizar el uso de mui */}
+            <Box
+              component="img"
+              src="media/images/NavMenu/logo_el_elegido.png"
+              alt="description"
+              sx={{ width: "5%", height: "auto", borderRadius: 2 }}
+            />
+            <Typography variant="h2" component="div">
               El Elegido Restaurant
             </Typography>
             {/* Renderizo DesktopMenu */}
             {desktopMenu}
-          </>
+          </Box>
         )}
       </Toolbar>
     </AppBar>
