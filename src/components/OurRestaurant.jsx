@@ -12,7 +12,6 @@ const sliderSettings = {
   slidesToShow: 1, // Número de imágenes visibles a la vez (en este caso, una imagen por vez)
   slidesToScroll: 1, // Número de imágenes que se desplazarán cuando se navegue en el carrusel
   autoplay: true, // Habilita el desplazamiento automático de las imágenes
- 
 };
 
 // Creo una variable con los valores sx de Box
@@ -31,7 +30,7 @@ const sxBoxSettings = {
 
 export const OurRestaurant = () => {
   // Genero un array de rutas de imágenes usando la función createArrayImagesOurRestaurant
-  const images = createArrayImagesOurRestaurant(7);
+  const images = createArrayImagesOurRestaurant(8);
 
   return (
     <Box sx={sxBoxSettings}>
