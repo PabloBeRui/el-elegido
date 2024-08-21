@@ -17,7 +17,7 @@ export const Carrusel = ({ images, sliderSettings }) => {
           <img
             src={src} // El valor de src es la ruta de la imagen 
             alt={`Foto ${index + 1}`}
-            style={{ width: "100%", height: "auto" }} // Height está en auto para mantener la proporcio´n y ajustar automáticamente la altura
+            style={{ width: "100%", height: "auto",borderRadius: '30% 70% 87% 13% / 26% 25% 75% 74% ' }} // Height está en auto para mantener la proporcio´n y ajustar automáticamente la altura
           />
         </div>
       ))}

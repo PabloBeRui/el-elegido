@@ -42,7 +42,7 @@ export const OurRestaurant = () => {
         El arte de comer bien
       </Typography>
       {/* Creo un Box de Material-UI y le aplico estilos con su propiedad sx y los valores de mi variable para manejar el layout y centrar el carrusel en la página*/}
-      <Box sx={sxBoxSettings}>
+      <Box sx={sxBoxSettings} >
         {/* Añado el componente carrusel pasándole las props (array de imágenes y ajustes del carrusel) del componente padre  */}
         <Carrusel images={images} sliderSettings={sliderSettings} />
       </Box>
