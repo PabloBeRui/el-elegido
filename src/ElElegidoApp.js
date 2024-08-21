@@ -33,7 +33,7 @@ function ElElegidoApp() {
       {/* Voy a encapsular cada componente en un Box para poder aplicar estilos de MUI */}
       <Router>
         {" "}
-        <Box sx={{ height: "20vh", flexShrink: 0 }}>
+        <Box sx={{ flexShrink: 0 }}>
           {" "}
           <NavMenu />
         </Box>
@@ -48,7 +48,7 @@ function ElElegidoApp() {
             <Route path="/our-menu" element={<OurMenu />} />
           </Routes>
         </Box>
-        <Box sx={{ flexShrink: 0, marginTop: "5vh" }}>
+        <Box sx={{ flexShrink: 0 }}>
           <Footer />
         </Box>
       </Router>
