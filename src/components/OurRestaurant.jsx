@@ -12,6 +12,7 @@ const sliderSettings = {
   slidesToShow: 1, // Número de imágenes visibles a la vez (en este caso, una imagen por vez)
   slidesToScroll: 1, // Número de imágenes que se desplazarán cuando se navegue en el carrusel
   autoplay: true, // Habilita el desplazamiento automático de las imágenes
+  arrows:false
 };
 
 // Creo una variable con los valores sx de Box
