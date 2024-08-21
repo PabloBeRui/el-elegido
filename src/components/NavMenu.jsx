@@ -16,7 +16,7 @@ import {
 } from "@mui/material";
 // Importo el ícono de menú de hamburguesa (MenuIcon) de Material-UI.
 import FlatwareIcon from "@mui/icons-material/Flatware";
-import MenuIcon from "@mui/icons-material/Menu";
+
 // Importo los hooks useMediaQuery y useTheme para detectar el tamaño de pantalla y para configurar el tema,tambien de Material-UI
 import { useMediaQuery, useTheme } from "@mui/material";
 
@@ -28,8 +28,10 @@ export const NavMenu = () => {
   // Accedo con useTheme nos al tema de Material-UI y sus breakpoints
   const theme = useTheme();
 
-  //compruebo directamente en el componente a través de los breakpoints si su tamaño se adapta a mobile , en este caso un máximo de 600px
+  //compruebo directamente en el componente a través de los breakpoints si su tamaño se adapta a mobile , el caso "sm" un máximo de 600px
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
+  //Aqui compruebo que esté entre sm y md
+  const isTablet = useMediaQuery(theme.breakpoints.between("sm", "md"));
 
   // creo una función de orden superior que actualiza el estado de drawerOpen a través de setDrawerOpen. Su parámetro "open" será true o false para abrir o cerrar el menú deslizante.
 
@@ -84,22 +86,48 @@ export const NavMenu = () => {
     </Drawer>
   );
 
-  // Menu para pantallas grandes. En lugar de  Drawer, Toolbar muestra botones horizontales en la barra de navegación.
+  // Menu para pantallas grandes. En lugar de  Drawer, Toolbar muestra botones horizontales en la barra de navegación. Comprobaré también con isTablet el tamaño de la ventana de visualizzacion para corregir el tamaño de los componentes
+
+  // dont repeat yourself
+  // Asigno el ternario a una variable
+
+  const buttonTextSize = { fontSize: isTablet ? "0.65em" : "1.25rem" };
+
   const desktopMenu = (
     <Toolbar>
-      <Button color="inherit" component={Link} to="/our-restaurant">
+      <Button
+        color="inherit"
+        component={Link}
+        to="/our-restaurant"
+        sx={buttonTextSize}>
         Nuestro Restaurante
       </Button>
-      <Button color="inherit" component={Link} to="/group-menu">
+      <Button
+        color="inherit"
+        component={Link}
+        to="/group-menu"
+        sx={buttonTextSize}>
         Menús de Grupo
       </Button>
-      <Button color="inherit" component={Link} to="/house-specialties">
+      <Button
+        color="inherit"
+        component={Link}
+        to="/house-specialties"
+        sx={buttonTextSize}>
         Especialidades de la Casa
       </Button>
-      <Button color="inherit" component={Link} to="/reservations">
+      <Button
+        color="inherit"
+        component={Link}
+        to="/reservations"
+        sx={buttonTextSize}>
         Reservas
       </Button>
-      <Button color="inherit" component={Link} to="/our-menu">
+      <Button
+        color="inherit"
+        component={Link}
+        to="/our-menu"
+        sx={buttonTextSize}>
         Nuestra Carta
       </Button>
     </Toolbar>
@@ -149,7 +177,7 @@ export const NavMenu = () => {
             {mobileMenu}
           </Box>
         ) : (
-          // Pantallas grandes
+          // Pantallas grandes - comprobaré con isTablet si el tamaño es intermedio para reducir el tamaño de los componentes
           <Box
             sx={{
               display: "flex",
@@ -163,7 +191,11 @@ export const NavMenu = () => {
               alt="description"
               sx={{ width: "5%", height: "auto", borderRadius: 2 }}
             />
-            <Typography variant="h2" component="div">
+            <Typography
+              variant="h2"
+              sx={{ fontSize: isTablet ? "1rem" : "4rem" }}
+              component="div"
+              display={isTablet && "none"}>
               El Elegido Restaurant
             </Typography>
             {/* Renderizo DesktopMenu */}
