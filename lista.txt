@@ -37,3 +37,5 @@ import TiktokIcon from "@mui/icons-material/Tiktok";
 
 // Importamos los hooks de Material-UI
 import { useMediaQuery, useTheme } from "@mui/material"; // Estos hooks nos permiten detectar el tamaño de la pantalla y acceder al tema.
+
+Imagenes sacadas de unsplash
