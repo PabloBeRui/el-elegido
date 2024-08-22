@@ -30,8 +30,8 @@ export const NavMenu = () => {
 
   //compruebo directamente en el componente a través de los breakpoints si su tamaño se adapta a mobile , el caso "sm" un máximo de 600px
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
-  //Aqui compruebo que esté entre sm y md
-  const isTablet = useMediaQuery(theme.breakpoints.between("sm", "md"));
+  //Aqui compruebo que esté entre sm y lg
+  const isTablet = useMediaQuery(theme.breakpoints.between("sm", "lg"));
 
   // creo una función de orden superior que actualiza el estado de drawerOpen a través de setDrawerOpen. Su parámetro "open" será true o false para abrir o cerrar el menú deslizante.
 
