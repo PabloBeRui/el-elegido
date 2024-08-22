@@ -12,7 +12,7 @@ const sliderSettings = {
   slidesToShow: 1, // Número de imágenes visibles a la vez (en este caso, una imagen por vez)
   slidesToScroll: 1, // Número de imágenes que se desplazarán cuando se navegue en el carrusel
   autoplay: true, // Habilita el desplazamiento automático de las imágenes
-  arrows:false
+  arrows: false,
 };
 
 // Creo una variable con los valores sx de Box
@@ -29,12 +29,27 @@ const sxBoxSettings = {
   paddingTop: "20px",
 };
 
+// Creo otra con los valores flex
+
+const sxFlexBoxSettings = {
+  display: "flex",
+  flexDirection: "column",
+  justifyContent: "space-around", // Separa el carrusel y el texto en la pantalla
+  alignItems: "center", // Centra los elementos en el eje secundario (horizontal)
+  height: "80vh", // Usar todo el espacio disponible en la pantalla
+};
+
 export const OurRestaurant = () => {
   // Genero un array de rutas de imágenes usando la función createArrayImagesOurRestaurant
   const images = createArrayImagesOurRestaurant(8);
 
   return (
-    <Box sx={sxBoxSettings}>
+    <Box sx={{ ...sxBoxSettings, ...sxFlexBoxSettings }}>
+      {/* Creo un Box de Material-UI y le aplico estilos con su propiedad sx y los valores de mi variable para manejar el layout y centrar el carrusel en la página*/}
+      <Box sx={{ ...sxBoxSettings }}>
+        {/* Añado el componente carrusel pasándole las props (array de imágenes y ajustes del carrusel) del componente padre  */}
+        <Carrusel images={images} sliderSettings={sliderSettings} />
+      </Box>
       <Typography
         sx={sxBoxSettings}
         variant="h5"
@@ -42,11 +57,6 @@ export const OurRestaurant = () => {
         color="primary">
         "El Arte de Comer Bien"
       </Typography>
-      {/* Creo un Box de Material-UI y le aplico estilos con su propiedad sx y los valores de mi variable para manejar el layout y centrar el carrusel en la página*/}
-      <Box sx={sxBoxSettings} >
-        {/* Añado el componente carrusel pasándole las props (array de imágenes y ajustes del carrusel) del componente padre  */}
-        <Carrusel images={images} sliderSettings={sliderSettings} />
-      </Box>
     </Box>
   );
 };
