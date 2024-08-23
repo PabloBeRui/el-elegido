@@ -39,3 +39,7 @@ import TiktokIcon from "@mui/icons-material/Tiktok";
 import { useMediaQuery, useTheme } from "@mui/material"; // Estos hooks nos permiten detectar el tamaño de la pantalla y acceder al tema.
 
 Imagenes sacadas de unsplash
+
+Instalo la biblioteca @mui/x-date-pickers que contiene el componente DateTimePicker, el cual usaré para manejar fechas:
+
+npm install @mui/x-date-pickers @mui/lab @mui/material @emotion/react @emotion/styled
