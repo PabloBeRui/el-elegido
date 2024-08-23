@@ -193,7 +193,7 @@ export const NavMenu = () => {
             />
             <Typography
               variant="h2"
-              sx={{ fontSize: isTablet ? "1rem" : "4rem" }}
+              sx={{ fontSize: isTablet ? "1rem" : "3rem" }}
               component="div"
               display={isTablet && "none"}>
               El Elegido Restaurant
