@@ -43,3 +43,12 @@ Imagenes sacadas de unsplash
 Instalo la biblioteca @mui/x-date-pickers que contiene el componente DateTimePicker, el cual usaré para manejar fechas:
 
 npm install @mui/x-date-pickers @mui/lab @mui/material @emotion/react @emotion/styled
+
+necesito instalar tambien los los módulos @mui/x-date-pickers y @mui/x-date-pickers/AdapterDateFns 
+
+npm install @mui/x-date-pickers @mui/lab @mui/material @emotion/react @emotion/styled
+npm install @mui/x-date-pickers/AdapterDateFns
+
+también la biblioteca date-fns
+
+npm install date-fns
