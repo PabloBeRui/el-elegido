@@ -12,6 +12,8 @@ import { useState } from "react";
 //Importo una biblioteca para manejar las fechas en el calendario
 import { DateTimePicker, LocalizationProvider } from "@mui/x-date-pickers";
 import { AdapterDateFns } from "@mui/x-date-pickers/AdapterDateFns";
+// Importo la localización en español desde `date-fns`
+import { es } from "date-fns/locale";
 
 export const Reservations = () => {
   //Voy a crear un useState y un useEffect para controlar la solicitud del diía y la hora
@@ -23,7 +25,8 @@ export const Reservations = () => {
   };
 
   return (
-    <LocalizationProvider dateAdapter={AdapterDateFns}>
+    // Envuelvo el componente con `LocalizationProvider` para asegurar la correcta localización de fecha y hora.
+    <LocalizationProvider dateAdapter={AdapterDateFns} adapterLocale={es}>
       <Box>
         <Typography>
           ¿Quieres reservar una experiencia culinaria con nosotros? Solicítala
@@ -58,6 +61,7 @@ export const Reservations = () => {
               labelPlacement="start"
             />
           </RadioGroup>
+
           <DateTimePicker
             label="Selecciona día y hora"
             value={selectDate}
