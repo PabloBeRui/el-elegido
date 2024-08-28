@@ -1,4 +1,5 @@
 import {
+  Button,
   Box,
   FormControlLabel,
   FormLabel,
@@ -14,6 +15,13 @@ import { DateTimePicker, LocalizationProvider } from "@mui/x-date-pickers";
 import { AdapterDateFns } from "@mui/x-date-pickers/AdapterDateFns";
 // Importo la localización en español desde `date-fns`
 import { es } from "date-fns/locale";
+
+//importo las restricciones de DateTimePicker
+
+import {
+  shouldDisableDate,
+  shouldDisableTime,
+} from "./helpers/dateTimePickerRestrictions.js";
 
 export const Reservations = () => {
   //Voy a crear un useState y un useEffect para controlar la solicitud del diía y la hora
@@ -61,13 +69,24 @@ export const Reservations = () => {
               labelPlacement="start"
             />
           </RadioGroup>
-
           <DateTimePicker
             label="Selecciona día y hora"
+            inputFormat="dd/MM/yyyy HH:mm"
             value={selectDate}
             onChange={handleDateChange}
+            shouldDisableDate={shouldDisableDate}
+            shouldDisableTime={shouldDisableTime}
             renderInput={(params) => <TextField {...params} />} //Prop propia de DateTimePicker
-          />
+          />{" "}
+          Abierto de Martes a Domingo de 12:00 a 18:00 y de 20:00 a 3:00
+          {/* añado margen y relleno al botón */}
+          <Button
+            type="submit"
+            variant="contained"
+            color="primary"
+            sx={{ mt: 2 }}>
+            Reservar
+          </Button>
         </form>
       </Box>
     </LocalizationProvider>
