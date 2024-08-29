@@ -7,6 +7,7 @@ import {
   RadioGroup,
   TextField,
   Typography,
+  Snackbar,
 } from "@mui/material";
 
 import { useState } from "react";
@@ -32,6 +33,21 @@ export const Reservations = () => {
     setSelectDate(updatedValue);
   };
 
+  //Voy a crear un useState y un useEffect para controlar Snackbar
+  // Snackbar-> componente para mensajes temporales (al dar a submit)
+
+  const [openSnackbar, setOpenSnackbar] = useState(false);
+
+  //Abrir al presionar el boton de reserva
+  const handleSubmitSnackbar = (event) => {
+    // Evito el reinicio automático del formulario al hacer submit
+    event.preventDefault();
+    setOpenSnackbar(true);
+
+    // Reinicio el formulario después de mostrar el mensaje
+    event.target.reset();
+  };
+
   return (
     // Envuelvo el componente con `LocalizationProvider` para asegurar la correcta localización de fecha y hora.
     <LocalizationProvider dateAdapter={AdapterDateFns} adapterLocale={es}>
@@ -43,7 +59,7 @@ export const Reservations = () => {
 
         {/* Creo un formulario aplicando los estilos de MUI  */}
         {/* {Utilizo el formulario no controlado que me proporciona el propio miu } */}
-        <form>
+        <form onSubmit={handleSubmitSnackbar}>
           <TextField name="name" label="Nombre" type="text" required />
           <TextField name="phone" label="Teléfono" type="tel" required />
           <TextField name="email" label="Email" type="email" />
@@ -88,6 +104,12 @@ export const Reservations = () => {
             Reservar
           </Button>
         </form>
+        <Snackbar
+          open={openSnackbar}
+          autoHideDuration={3000} // Duración en milisegundos (3 segundos)
+          onClose={() => setOpenSnackbar(false)}
+          message="Reserva enviada con éxito"
+        />
       </Box>
     </LocalizationProvider>
   );
