@@ -53,3 +53,7 @@ también la biblioteca date-fns
 
 npm install date-fns
 
+Snackbar: Es un componente que muestra un mensaje temporal en la pantalla.
+
+
+

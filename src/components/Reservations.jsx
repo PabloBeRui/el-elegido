@@ -48,41 +48,91 @@ export const Reservations = () => {
     event.target.reset();
   };
 
+  //Voy a crear un useState y un UseEffect para manejar el cambio de selección del radius
+
+  const [selectedRadius, setSelectedRadius] = useState(1);
+
+  const handleRadius = (event) => {
+    let value = event.target.value;
+
+    setSelectedRadius(value);
+  };
+
   return (
     // Envuelvo el componente con `LocalizationProvider` para asegurar la correcta localización de fecha y hora.
     <LocalizationProvider dateAdapter={AdapterDateFns} adapterLocale={es}>
-      <Box>
-        <Typography>
+      <Box
+        sx={{
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "space-around",
+          minHeight: "82vh",
+          alignItems: "center",
+
+          maxWidth: 400,
+          margin: "0 auto", // Centra el formulario en la página
+        }}>
+        <Typography
+          sx={{
+            textAlign: "center",
+          }}>
           ¿Quieres reservar una experiencia culinaria con nosotros? Solicítala
           Aqui
         </Typography>
-
         {/* Creo un formulario aplicando los estilos de MUI  */}
-        {/* {Utilizo el formulario no controlado que me proporciona el propio miu } */}
-        <form onSubmit={handleSubmitSnackbar}>
-          <TextField name="name" label="Nombre" type="text" required />
-          <TextField name="phone" label="Teléfono" type="tel" required />
-          <TextField name="email" label="Email" type="email" />
+        {/* {Utilizo el formulario que me proporciona el propio miu } */}
+        <Box
+          component="form"
+          onSubmit={handleSubmitSnackbar}
+          sx={{
+            display: "flex", // Aplico un diseño flex
+            flexDirection: "column", // Organizo los elementos en una columna
+            justifyContent: "center",
+            alignItems: "center",
+            width: "100%", // Establezco un ancho máximo para el contenedor
+            margin: "0 auto", // Centro el contenedor en la página
+            gap: 0.5,
+          }}>
+          <TextField
+            name="name"
+            label="Nombre"
+            type="text"
+            sx={{ mb: 1, display: "block" }}
+            required
+          />
+          <TextField
+            name="phone"
+            label="Teléfono"
+            type="tel"
+            sx={{ mb: 1, display: "block" }}
+            required
+          />
+          <TextField
+            name="email"
+            label="Email"
+            type="email"
+            sx={{ mb: 2, display: "block" }}
+          />
           {/* Creo un grupo de inputs de tipo radio */}
-          <RadioGroup name="reservationType">
+          <RadioGroup
+            name="reservationType"
+            value={selectedRadius}
+            onChange={handleRadius}>
             <FormLabel>Elija una opcion</FormLabel>
             <FormControlLabel
-              value="dinner"
+              value={1}
               control={<Radio />}
-              label="Cena (1-10 personas)"
-              labelPlacement="start" //Coloco el radio a la derecha del texto
+              label="1-10 personas"
             />
             <FormControlLabel
-              value="groupDinner"
+              value={10}
               control={<Radio />}
-              label="Cena en grupo (10+ personas)"
-              labelPlacement="start"
+              label="Grupo (10+ personas)"
             />
             <FormControlLabel
-              value="specialEvent"
+              value={20}
               control={<Radio />}
               label="Evento especial (20+ personas)"
-              labelPlacement="start"
             />
           </RadioGroup>
           <DateTimePicker
@@ -94,21 +144,27 @@ export const Reservations = () => {
             shouldDisableTime={shouldDisableTime}
             renderInput={(params) => <TextField {...params} />} //Prop propia de DateTimePicker
           />{" "}
-          Abierto de Martes a Domingo de 12:00 a 18:00 y de 20:00 a 3:00
           {/* añado margen y relleno al botón */}
           <Button
             type="submit"
             variant="contained"
             color="primary"
-            sx={{ mt: 2 }}>
+            sx={{ mt: "1rem", display: "block" }}>
             Reservar
           </Button>
-        </form>
+        </Box>
+        <Typography
+          sx={{
+            textAlign: "center",
+          }}>
+          Martes a Domingo de 12:00 a 18:00 y de 20:00 a 3:00
+        </Typography>
+
         <Snackbar
           open={openSnackbar}
           autoHideDuration={3000} // Duración en milisegundos (3 segundos)
           onClose={() => setOpenSnackbar(false)}
-          message="Reserva enviada con éxito"
+          message="Solicitud de Reserva enviada con éxito"
         />
       </Box>
     </LocalizationProvider>
