@@ -68,9 +68,8 @@ export const Reservations = () => {
           justifyContent: "space-around",
           minHeight: "82vh",
           alignItems: "center",
-
           maxWidth: 400,
-          margin: "0 auto", // Centra el formulario en la página
+          margin: "0 auto",
         }}>
         <Typography
           sx={{
@@ -85,12 +84,12 @@ export const Reservations = () => {
           component="form"
           onSubmit={handleSubmitSnackbar}
           sx={{
-            display: "flex", // Aplico un diseño flex
-            flexDirection: "column", // Organizo los elementos en una columna
+            display: "flex",
+            flexDirection: "column",
             justifyContent: "center",
             alignItems: "center",
-            width: "100%", // Establezco un ancho máximo para el contenedor
-            margin: "0 auto", // Centro el contenedor en la página
+            width: "100%",
+            margin: "0 auto",
             gap: 0.5,
           }}>
           <TextField
@@ -162,7 +161,7 @@ export const Reservations = () => {
 
         <Snackbar
           open={openSnackbar}
-          autoHideDuration={3000} // Duración en milisegundos (3 segundos)
+          autoHideDuration={3000} // Duración en milisegundos
           onClose={() => setOpenSnackbar(false)}
           message="Solicitud de Reserva enviada con éxito"
         />
