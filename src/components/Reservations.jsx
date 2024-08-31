@@ -68,12 +68,14 @@ export const Reservations = () => {
           justifyContent: "space-around",
           minHeight: "82vh",
           alignItems: "center",
-          maxWidth: 400,
+          maxWidth: 600,
           margin: "0 auto",
         }}>
         <Typography
           sx={{
             textAlign: "center",
+            mt: 2,
+            mb: 4,
           }}>
           ¿Quieres reservar una experiencia culinaria con nosotros? Solicítala
           Aqui
@@ -110,7 +112,7 @@ export const Reservations = () => {
             name="email"
             label="Email"
             type="email"
-            sx={{ mb: 2, display: "block" }}
+            sx={{ mb: 4, display: "block" }}
           />
           {/* Creo un grupo de inputs de tipo radio */}
           <RadioGroup
@@ -141,14 +143,16 @@ export const Reservations = () => {
             onChange={handleDateChange}
             shouldDisableDate={shouldDisableDate}
             shouldDisableTime={shouldDisableTime}
-            renderInput={(params) => <TextField {...params} />} //Prop propia de DateTimePicker
-          />{" "}
+            renderInput={(params) => (
+              <TextField {...params} sx={{ mt: 4, mb: 4 }} />
+            )} //Prop propia de DateTimePicker
+          />
           {/* añado margen y relleno al botón */}
           <Button
             type="submit"
             variant="contained"
             color="primary"
-            sx={{ mt: "1rem", display: "block" }}>
+            sx={{ mb: 6, display: "block" }}>
             Reservar
           </Button>
         </Box>
