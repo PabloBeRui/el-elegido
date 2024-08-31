@@ -2,6 +2,8 @@ import { Box, Typography } from "@mui/material";
 //Listas propias de MUI
 //List->ul || ol  ListItem->li ListItemText->texto del li ListSubheader-> encabezado
 import { List, ListItem, ListItemText, ListSubheader } from "@mui/material";
+import { Link } from "react-router-dom";
+import { HouseSpecialties } from "./HouseSpecialties";
 
 export const OurMenu = () => {
   return (
@@ -121,6 +123,42 @@ export const OurMenu = () => {
             primary="Pato confitado"
             secondary="Con puré de boniato y reducción de frutos rojos"
           />
+        </ListItem>
+        <ListItem>
+          <ListItemText
+            primary="Raviolis de langosta"
+            secondary="Con salsa de marisco y un toque de albahaca fresca"
+          />
+        </ListItem>
+        <ListItem>
+          <ListItemText
+            primary="Cordero asado"
+            secondary="Con puré de apionabo y salsa de romero"
+          />
+        </ListItem>
+        <ListItem>
+          <ListItemText
+            primary="Filete de atún rojo"
+            secondary="Con costra de sésamo y salsa de soja cítrica"
+          />
+        </ListItem>
+        <ListItem>
+          <Box
+            component={Link}
+            to="/house-specialties"
+            sx={{
+              textDecoration: "none",
+              color: "inherit",
+              transition: "all 0.5s",
+              "&:hover": {
+                color: "primary.main",
+              },
+            }}>
+            <ListItemText
+              primary="Especialidades de la Casa"
+              secondary="Consulte nuestras especialidades"
+            />
+          </Box>
         </ListItem>
       </List>
 
