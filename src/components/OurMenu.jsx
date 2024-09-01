@@ -3,7 +3,7 @@ import { Box, Typography } from "@mui/material";
 //List->ul || ol  ListItem->li ListItemText->texto del li ListSubheader-> encabezado
 import { List, ListItem, ListItemText, ListSubheader } from "@mui/material";
 import { Link } from "react-router-dom";
-import { HouseSpecialties } from "./HouseSpecialties";
+
 
 export const OurMenu = () => {
   return (
