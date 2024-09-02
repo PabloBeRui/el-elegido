@@ -23,9 +23,10 @@ export const Card = ({ title, image, description }) => {
         borderRadius: 2,
         boxShadow: 1,
         margin: 2,
-        maxWidth: 600,
+        maxWidth: 800,
         width: "90%",
         overflow: "hidden",
+        gap: { xs: "1rem", sm: "3rem" },
       }}>
       <Box
         component="img"
