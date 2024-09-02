@@ -1,6 +1,8 @@
 import { Box, Typography } from "@mui/material";
 import { useState } from "react";
 
+import "../css/animations.css";
+
 // Componente reutilizable para crear cards
 export const Card = ({ title, image, description }) => {
   // Creo el UseState isHovered para manejar el estado de hover en la imagen
@@ -59,8 +61,9 @@ export const Card = ({ title, image, description }) => {
           variant="body2"
           color="textSecondary"
           sx={{
-            filter: isHovered ? "blur(3px)" : "none",
-            transition: "filter 3s ease",
+            animation: isHovered
+              ? "blurOut 1.5s ease-in forwards"
+              : "blurIn 2.5s ease forwards",
           }}>
           {description}
         </Typography>
