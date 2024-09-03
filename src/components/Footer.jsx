@@ -18,6 +18,7 @@ import PolicyIcon from "@mui/icons-material/Policy";
 
 //REACT
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 export const Footer = () => {
   // Creo un useState para el menú deslizante, para manejar si está abierto o cerrado.
@@ -95,10 +96,26 @@ export const Footer = () => {
           )}
         </Box>
         {/* Seccion 2 - Nombre y copyright*/}
-        <Box>
+        <Box
+          sx={{
+            mr: { xs: 2, sm: 4, md: 10 }, // Ajusta el margen derecho según el tamaño de la pantalla
+          }}>
           {/* camio el estilo y formato del texto con Typography */}
+          {/* rel="noopener noreferrer" para mejorar seguridad y privacidad al target _blank */}
           <Typography variant="body2" align="center">
-            © 2024 El Elegido
+            © 2024 El Elegido by &nbsp;
+            <Box
+              component="a"
+              href="https://github.com/PabloBeRui/el-elegido"
+              target="_blank"
+              rel="noopener noreferrer"
+              sx={{
+                textDecoration: "none",
+                color: "primary",
+                fontWeight: "bold",
+              }}>
+              PabloBeRui
+            </Box>
           </Typography>
         </Box>
         {/* Seccion  - Contacto*/}
