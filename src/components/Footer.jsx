@@ -45,6 +45,7 @@ export const Footer = () => {
       <List>
         {/* Cada ListItem es un botón dentro del menú deslizante */}
         <ListItem button>
+          {/* component={Link} to="/legal/PrivacyPolicy.jsx" */}
           <ListItemText primary="Política de Privacidad" />{" "}
           {/* Texto que indica la Política de Privacidad */}
         </ListItem>
@@ -89,7 +90,7 @@ export const Footer = () => {
           ) : (
             // En dispositivos más grandes, se muestran tres botones
             <>
-              <Button color="inherit">Política de Privacidad</Button>
+              <Button color="inherit"> Link Política de Privacidad</Button>
               <Button color="inherit">Aviso Legal</Button>
               <Button color="inherit">Política de Cookies</Button>
             </>
@@ -98,7 +99,7 @@ export const Footer = () => {
         {/* Seccion 2 - Nombre y copyright*/}
         <Box
           sx={{
-            mr: { xs: 2, sm: 4, md: 10 }, // Ajusta el margen derecho según el tamaño de la pantalla
+            mr: { xs: 2, sm: 4, md: 10 },
           }}>
           {/* camio el estilo y formato del texto con Typography */}
           {/* rel="noopener noreferrer" para mejorar seguridad y privacidad al target _blank */}
