@@ -102,14 +102,28 @@ export const Footer = () => {
           </Typography>
         </Box>
         {/* Seccion  - Contacto*/}
+        {/* rel="noopener noreferrer" para mejorar seguridad y privacidad al target _blank */}
         <Box>
-          <IconButton color="inherit">
+          <IconButton
+            color="inherit"
+            component="a"
+            href="mailto:pablo.bellon.ruibal@hotmail.com">
             <MailIcon />
           </IconButton>
-          <IconButton color="inherit">
+          <IconButton
+            color="inherit"
+            component="a"
+            href="https://wa.me/+34670025720"
+            target="_blank"
+            rel="noopener noreferrer">
             <WhatsAppIcon />
           </IconButton>
-          <IconButton color="inherit">
+          <IconButton
+            color="inherit"
+            component="a"
+            href="https://www.instagram.com/instagram"
+            target="_blank"
+            rel="noopener noreferrer">
             <InstagramIcon />
           </IconButton>
         </Box>
