@@ -44,15 +44,27 @@ export const Footer = () => {
     >
       <List>
         {/* Cada ListItem es un botón dentro del menú deslizante */}
-        <ListItem button component={Link} to="/legal/PrivacyPolicy">
+        <ListItem
+          button
+          component={Link}
+          to="/legal/PrivacyPolicy"
+          onClick={toggleDrawer(false)}>
           <ListItemText primary="Política de Privacidad" />
           {/* Texto que indica la Política de Privacidad */}
         </ListItem>
-        <ListItem button component={Link} to="/legal/LegalNotice">
+        <ListItem
+          button
+          component={Link}
+          to="/legal/LegalNotice"
+          onClick={toggleDrawer(false)}>
           <ListItemText primary="Aviso Legal" />
           {/* Texto que indica el Aviso Legal */}
         </ListItem>
-        <ListItem button component={Link} to="/legal/CookiesPolicy">
+        <ListItem
+          button
+          component={Link}
+          to="/legal/CookiesPolicy"
+          onClick={toggleDrawer(false)}>
           <ListItemText primary="Política de Cookies" />
           {/* Texto que indica la Política de Cookies */}
         </ListItem>
