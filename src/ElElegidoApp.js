@@ -12,6 +12,10 @@ import { GroupMenu } from "./components/GroupMenu";
 import { HouseSpecialties } from "./components/HouseSpecialties";
 import { OurRestaurant } from "./components/OurRestaurant";
 import { OurMenu } from "./components/OurMenu";
+//Rutas legal
+import { PrivacyPolicy } from "./components/legal/PrivacyPolicy";
+import { LegalNotice } from "./components/legal/LegalNotice";
+import { CookiesPolicy } from "./components/legal/CookiesPolicy";
 
 //MUI
 import { Box } from "@mui/material";
@@ -23,10 +27,12 @@ import "slick-carousel/slick/slick-theme.css";
 
 function ElElegidoApp() {
   return (
+    //dvh para excluir barra de direcciones en el navegador
+
     <Box
       id="app-box"
       sx={{
-        height: "100vh",
+        height: "100dvh",
         display: "flex",
         flexDirection: "column",
       }}>
@@ -46,6 +52,11 @@ function ElElegidoApp() {
             <Route path="/our-restaurant" element={<OurRestaurant />} />
             <Route path="/reservations" element={<Reservations />} />
             <Route path="/our-menu" element={<OurMenu />} />
+
+            {/*  rutas para la sección legal */}
+            <Route path="/legal/PrivacyPolicy" element={<PrivacyPolicy />} />
+            <Route path="/legal/LegalNotice" element={<LegalNotice />} />
+            <Route path="/legal/CookiesPolicy" element={<CookiesPolicy />} />
           </Routes>
         </Box>
         <Box sx={{ flexShrink: 0 }}>

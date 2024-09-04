@@ -44,17 +44,16 @@ export const Footer = () => {
     >
       <List>
         {/* Cada ListItem es un botón dentro del menú deslizante */}
-        <ListItem button>
-          {/* component={Link} to="/legal/PrivacyPolicy.jsx" */}
-          <ListItemText primary="Política de Privacidad" />{" "}
+        <ListItem button component={Link} to="/legal/PrivacyPolicy">
+          <ListItemText primary="Política de Privacidad" />
           {/* Texto que indica la Política de Privacidad */}
         </ListItem>
-        <ListItem button>
-          <ListItemText primary="Aviso Legal" />{" "}
+        <ListItem button component={Link} to="/legal/LegalNotice">
+          <ListItemText primary="Aviso Legal" />
           {/* Texto que indica el Aviso Legal */}
         </ListItem>
-        <ListItem button>
-          <ListItemText primary="Política de Cookies" />{" "}
+        <ListItem button component={Link} to="/legal/CookiesPolicy">
+          <ListItemText primary="Política de Cookies" />
           {/* Texto que indica la Política de Cookies */}
         </ListItem>
       </List>
@@ -90,9 +89,22 @@ export const Footer = () => {
           ) : (
             // En dispositivos más grandes, se muestran tres botones
             <>
-              <Button color="inherit"> Link Política de Privacidad</Button>
-              <Button color="inherit">Aviso Legal</Button>
-              <Button color="inherit">Política de Cookies</Button>
+              <Button
+                color="inherit"
+                component={Link}
+                to="/legal/PrivacyPolicy">
+                {" "}
+                Política de Privacidad
+              </Button>
+              <Button color="inherit" component={Link} to="/legal/LegalNotice">
+                Aviso Legal
+              </Button>
+              <Button
+                color="inherit"
+                component={Link}
+                to="/legal/CookiesPolicy">
+                Política de Cookies
+              </Button>
             </>
           )}
         </Box>

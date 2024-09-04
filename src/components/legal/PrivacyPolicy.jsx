@@ -1,5 +1,5 @@
 import React from "react";
 
 export const PrivacyPolicy = () => {
-  return <div>PrivacyPolicy</div>;
+  return <div>PrivacyPolicy____________</div>;
 };
