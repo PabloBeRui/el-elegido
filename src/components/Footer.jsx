@@ -15,6 +15,7 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import MailIcon from "@mui/icons-material/Mail";
 import PolicyIcon from "@mui/icons-material/Policy";
+import LocationOnIcon from "@mui/icons-material/LocationOn";
 
 //REACT
 import { useState } from "react";
@@ -167,6 +168,14 @@ export const Footer = () => {
             target="_blank"
             rel="noopener noreferrer">
             <InstagramIcon />
+          </IconButton>
+          <IconButton
+            color="inherit"
+            component="a"
+            href="https://www.google.com/"
+            target="_blank"
+            rel="noopener noreferrer">
+            <LocationOnIcon />
           </IconButton>
         </Box>
       </Box>
