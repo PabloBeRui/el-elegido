@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-export const ApiFetch = ({ url, options }) => {
+export const ApiFetch = ( url, options ) => {
   // UseState de datos, estado de carga y estado de errores
 
   const [data, setdata] = useState(null);
@@ -28,12 +28,12 @@ export const ApiFetch = ({ url, options }) => {
       } finally {
         setloading(false); //quito el estado de carga
       }
-
-      fetchData();
     };
+    fetchData();
   }, [url, options]);
 
   //Devuelvo los nuevos valores de data, loading y error
 
   return { data, loading, error };
 };
+
