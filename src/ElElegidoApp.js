@@ -12,6 +12,7 @@ import { GroupMenu } from "./components/GroupMenu";
 import { HouseSpecialties } from "./components/HouseSpecialties";
 import { OurRestaurant } from "./components/OurRestaurant";
 import { OurMenu } from "./components/OurMenu";
+import { OurLocation } from "./components/OurLocation";
 //Rutas legal
 import { PrivacyPolicy } from "./components/legal/PrivacyPolicy";
 import { LegalNotice } from "./components/legal/LegalNotice";
@@ -52,6 +53,7 @@ function ElElegidoApp() {
             <Route path="/our-restaurant" element={<OurRestaurant />} />
             <Route path="/reservations" element={<Reservations />} />
             <Route path="/our-menu" element={<OurMenu />} />
+            <Route path="/OurLocation" element={<OurLocation />} />
 
             {/*  rutas para la sección legal */}
             <Route path="/legal/PrivacyPolicy" element={<PrivacyPolicy />} />

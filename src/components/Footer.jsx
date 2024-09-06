@@ -169,12 +169,7 @@ export const Footer = () => {
             rel="noopener noreferrer">
             <InstagramIcon />
           </IconButton>
-          <IconButton
-            color="inherit"
-            component="a"
-            href="https://www.google.com/"
-            target="_blank"
-            rel="noopener noreferrer">
+          <IconButton color="inherit" component={Link} to="/OurLocation">
             <LocationOnIcon />
           </IconButton>
         </Box>

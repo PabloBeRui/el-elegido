@@ -59,8 +59,8 @@ Snackbar: Es un componente que muestra un mensaje temporal en la pantalla.
 Voy a usar netlify con serverless para proteger mi API key al no tener backend
 
 
- Instalo @react-google-maps/api
+ OpenStreetMap
+Instaslo las dependencias necesarias para React-Leaflet
+Vas a necesitar instalar las bibliotecas react-leaflet y leaflet para trabajar con OpenStreetMap.
 
-npm install @react-google-maps/api
-Esta biblioteca es una envoltura para la API de Google Maps y está optimizada para su uso en aplicaciones React.
-
+npm install react-leaflet leaflet
