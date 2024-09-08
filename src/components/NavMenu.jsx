@@ -20,6 +20,10 @@ import FlatwareIcon from "@mui/icons-material/Flatware";
 // Importo los hooks useMediaQuery y useTheme para detectar el tamaño de pantalla y para configurar el tema,tambien de Material-UI
 import { useMediaQuery, useTheme } from "@mui/material";
 
+//Componente para inmportar el icono del tiempo
+
+import { WeatherIcon } from "./helpers/WeatherIcon";
+
 export const NavMenu = () => {
   // Creo el hook `drawerOpen` para controlar si el menú está abierto o cerrado.
 
@@ -166,13 +170,8 @@ export const NavMenu = () => {
             <Typography variant="h6" component="div">
               El Elegido Restaurant
             </Typography>
-            {/* Añado el logo del local, en formato box para maximizar el uso de mui */}
-            <Box
-              component="img"
-              src="media/images/NavMenu/logo_el_elegido.png"
-              alt="description"
-              sx={{ width: "10%", height: "auto", borderRadius: 2 }}
-            />
+            {/* Añado el componente WeatherIcon */}
+            <WeatherIcon />
             {/* Renderizo mobileMenu */}
             {mobileMenu}
           </Box>
@@ -184,13 +183,8 @@ export const NavMenu = () => {
               justifyContent: "space-between",
               alignItems: "center",
             }}>
-            {/* Añado el logo del local, en formato box para maximizar el uso de mui */}
-            <Box
-              component="img"
-              src="media/images/NavMenu/logo_el_elegido.png"
-              alt="description"
-              sx={{ width: "5%", height: "auto", borderRadius: 2 }}
-            />
+           {/* Añado el componente WeatherIcon */}
+            <WeatherIcon />
             <Typography
               variant="h2"
               sx={{ fontSize: isTablet ? "1rem" : "3rem" }}
