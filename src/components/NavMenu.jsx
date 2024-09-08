@@ -148,8 +148,9 @@ export const NavMenu = () => {
         {isMobile ? (
           <Box
             sx={{
+              width:"100vw",
               display: "flex",
-              justifyContent: "space-between",
+              justifyContent: "space-around",
               alignItems: "center",
             }}>
             {/* IconButton es el botón de hamburguesa que abre el menú deslizante en dispositivos móviles */}
@@ -178,7 +179,8 @@ export const NavMenu = () => {
         ) : (
           // Pantallas grandes - comprobaré con isTablet si el tamaño es intermedio para reducir el tamaño de los componentes
           <Box
-            sx={{
+              sx={{
+              width: "100vw",
               display: "flex",
               justifyContent: "space-between",
               alignItems: "center",
@@ -189,7 +191,8 @@ export const NavMenu = () => {
               variant="h2"
               sx={{ fontSize: isTablet ? "1rem" : "3rem" }}
               component="div"
-              display={isTablet && "none"}>
+              >
+                {/* display={isTablet && "none"} */}
               El Elegido Restaurant
             </Typography>
             {/* Renderizo DesktopMenu */}
