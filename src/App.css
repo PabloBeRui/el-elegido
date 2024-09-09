@@ -17,3 +17,15 @@ body{background-color: yellow;} */
 * {
   user-select: none;
 }
+
+/* importo fuentes localmente */
+
+@font-face {
+  font-family: "Cinzel";
+  src: url(/src/components/assets/fonts/Cinzel-VariableFont_wght.ttf);
+}
+
+@font-face {
+  font-family: "GreatVibes";
+  src: url(/src/components/assets/fonts/GreatVibes-Regular.ttf);
+}

@@ -36,7 +36,7 @@ export const Footer = () => {
     setDrawerOpen(open);
   };
 
-  // Definimos el menú deslizante que aparecerá en dispositivos móviles cuando el Drawer esté abierto.
+  // Definine el menú deslizante que aparecerá en dispositivos móviles cuando el Drawer esté abierto.
   const mobileMenu = (
     <Drawer
       anchor="bottom" // Coloco el menú en la parte inferior de la pantalla.
@@ -84,9 +84,9 @@ export const Footer = () => {
       <Box
         sx={{
           display: "flex",
-          justifyContent: "space-between",
+          justifyContent: { xs: "space-between", lg: "space-around" },
           alignItems: "center",
-          padding: "5px",
+          padding: { xs: "2px", sm: "5px" },
         }}>
         {/* Seccion 1 - Menu*/}
         <Box>
@@ -124,11 +124,14 @@ export const Footer = () => {
         {/* Seccion 2 - Nombre y copyright*/}
         <Box
           sx={{
-            mr: { xs: 2, sm: 4, md: 10 },
+            mr: { xs: 0, sm: 4, md: 10 },
           }}>
           {/* camio el estilo y formato del texto con Typography */}
           {/* rel="noopener noreferrer" para mejorar seguridad y privacidad al target _blank */}
-          <Typography variant="body2" align="center">
+          <Typography
+            variant="body2"
+            align="center"
+            sx={{ fontSize: { xs: "0.75rem", sm: "1rem" } }}>
             © 2024 El Elegido by &nbsp;
             <Box
               component="a"
@@ -139,6 +142,7 @@ export const Footer = () => {
                 textDecoration: "none",
                 color: "primary",
                 fontWeight: "bold",
+                mr: { sx: 0, md: "8rem" },
               }}>
               PabloBeRui
             </Box>
@@ -146,7 +150,11 @@ export const Footer = () => {
         </Box>
         {/* Seccion  - Contacto*/}
         {/* rel="noopener noreferrer" para mejorar seguridad y privacidad al target _blank */}
-        <Box>
+        <Box
+          sx={{
+            display: "flex",
+            gap: { xs: "4px", sm: "8px", md: "12px" }, // Ajusta el espacio entre íconos para pantallas pequeñas
+          }}>
           <IconButton
             color="inherit"
             component="a"

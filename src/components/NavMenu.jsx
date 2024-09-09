@@ -148,7 +148,7 @@ export const NavMenu = () => {
         {isMobile ? (
           <Box
             sx={{
-              width:"100vw",
+              width: "100vw",
               display: "flex",
               justifyContent: "space-around",
               alignItems: "center",
@@ -168,7 +168,10 @@ export const NavMenu = () => {
             -Con el component="div" el h6 se renderizará como un div
             
             */}
-            <Typography variant="h6" component="div">
+            <Typography
+              variant="h6"
+              component="div"
+              sx={{ fontFamily: "Cinzel, serif" }}>
               El Elegido Restaurant
             </Typography>
             {/* Añado el componente WeatherIcon */}
@@ -179,20 +182,22 @@ export const NavMenu = () => {
         ) : (
           // Pantallas grandes - comprobaré con isTablet si el tamaño es intermedio para reducir el tamaño de los componentes
           <Box
-              sx={{
+            sx={{
               width: "100vw",
               display: "flex",
               justifyContent: "space-between",
               alignItems: "center",
             }}>
-           {/* Añado el componente WeatherIcon */}
+            {/* Añado el componente WeatherIcon */}
             <WeatherIcon />
             <Typography
               variant="h2"
-              sx={{ fontSize: isTablet ? "1rem" : "3rem" }}
-              component="div"
-              >
-                {/* display={isTablet && "none"} */}
+              sx={{
+                fontSize: isTablet ? "1rem" : "3rem",
+                fontFamily: "Cinzel, serif",
+              }}
+              component="div">
+              {/* display={isTablet && "none"} */}
               El Elegido Restaurant
             </Typography>
             {/* Renderizo DesktopMenu */}

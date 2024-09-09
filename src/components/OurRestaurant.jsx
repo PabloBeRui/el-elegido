@@ -50,7 +50,11 @@ export const OurRestaurant = () => {
         <Carrusel images={images} sliderSettings={sliderSettings} />
       </Box>
       <Typography
-        sx={sxBoxSettings}
+        sx={{
+          ...sxBoxSettings,
+          fontFamily: "GreatVibes, serif",
+          fontSize: "2rem",
+        }}
         variant="h5"
         align="center"
         color="primary">
