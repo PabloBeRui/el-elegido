@@ -23,6 +23,7 @@ import {
   shouldDisableDate,
   shouldDisableTime,
 } from "./helpers/dateTimePickerRestrictions.js";
+import { sendEmail } from "./helpers/sendEmail.js";
 
 export const Reservations = () => {
   //Voy a crear un useState y un useEffect para controlar la solicitud del diía y la hora
@@ -38,11 +39,17 @@ export const Reservations = () => {
 
   const [openSnackbar, setOpenSnackbar] = useState(false);
 
-  //Abrir al presionar el boton de reserva
-  const handleSubmitSnackbar = (event) => {
+  //Funcion para abrir el sanckBar al presionar el boton de reserva
+  //TODO Agrego dentro el la función sendEmail para enviar el formulario con EmailJS
+  const handleSubmitSnackbar = async (event) => {
     // Evito el reinicio automático del formulario al hacer submit
     event.preventDefault();
     setOpenSnackbar(true);
+
+    // llamo a la función sendEmail y le paso el formulario
+
+    const result = await sendEmail(event.target);
+    console.log("Correo enviado exitosamente:", result);
 
     // Reinicio el formulario después de mostrar el mensaje
     event.target.reset();
@@ -147,6 +154,15 @@ export const Reservations = () => {
               <TextField {...params} sx={{ mt: 4, mb: 4 }} />
             )} //Prop propia de DateTimePicker
           />
+
+          {/*Agrego un campo oculto en el formulario para incluir el valor de fecha y hora que está siendo manejado
+           por el estado selectDate para intentar solucionar que DateTimePicker no permite tolocaleString() */}
+          <input
+            type="hidden"
+            name="dateTime"
+            value={selectDate.toLocaleString()}
+          />
+
           {/* añado margen y relleno al botón */}
           <Button
             type="submit"

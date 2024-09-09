@@ -64,3 +64,9 @@ Instaslo las dependencias necesarias para React-Leaflet
 Vas a necesitar instalar las bibliotecas react-leaflet y leaflet para trabajar con OpenStreetMap.
 
 npm install react-leaflet leaflet
+
+
+instalo la biblioteca de EmailJS en mi proyecto React, con ello podré enviarme email cada reserva
+
+
+npm install emailjs-com
