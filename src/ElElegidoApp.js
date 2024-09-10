@@ -25,9 +25,7 @@ import { Box } from "@mui/material";
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-
-
-
+import { BannerCookies } from "./components/helpers/BannerCookies";
 
 function ElElegidoApp() {
   return (
@@ -40,6 +38,8 @@ function ElElegidoApp() {
         display: "flex",
         flexDirection: "column",
       }}>
+      {/* Componente snackbar de aceptacion de cookies */}
+      <BannerCookies />
       {/* Voy a encapsular cada componente en un Box para poder aplicar estilos de MUI */}
       <Router>
         {" "}
