@@ -101,25 +101,28 @@ export const Reservations = () => {
             margin: "0 auto",
             gap: 0.5,
           }}>
+          {/* inputProps-> propiedad de miu para uso de expreiones regulares */}
           <TextField
             name="name"
             label="Nombre"
             type="text"
-            sx={{ mb: 1, display: "block" }}
+            sx={{ mb: 2, display: "block" }}
             required
+            inputProps={{ pattern: "^[A-Za-zÁÉÍÓÚáéíóúÑñ ]{2,}$" }} // Al menos 2 letras
+            helperText="Use al menos 2 letras"
           />
           <TextField
             name="phone"
             label="Teléfono"
             type="tel"
-            sx={{ mb: 1, display: "block" }}
+            sx={{ mb: 2, display: "block" }}
             required
           />
           <TextField
             name="email"
             label="Email"
             type="email"
-            sx={{ mb: 4, display: "block" }}
+            sx={{ mb: 2, display: "block" }}
           />
           {/* Creo un grupo de inputs de tipo radio */}
           <RadioGroup
