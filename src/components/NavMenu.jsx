@@ -193,7 +193,7 @@ export const NavMenu = () => {
             <Typography
               variant="h2"
               sx={{
-                fontSize: isTablet ? "1rem" : "3rem",
+                fontSize: isTablet ? "1rem" : "2.5rem",
                 fontFamily: "Cinzel, serif",
               }}
               component="div">
