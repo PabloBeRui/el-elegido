@@ -82,7 +82,7 @@ export const Reservations = () => {
           sx={{
             textAlign: "center",
             mt: 2,
-            mb: 4,
+            mb: 3,
           }}>
           ¿Quieres reservar una experiencia culinaria con nosotros? Solicítala
           Aqui

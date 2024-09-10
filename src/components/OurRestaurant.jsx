@@ -53,7 +53,7 @@ export const OurRestaurant = () => {
         sx={{
           ...sxBoxSettings,
           fontFamily: "GreatVibes, serif",
-          fontSize: "2rem",
+          fontSize: {xs:"2.4rem",md:"4rem"},
         }}
         variant="h5"
         align="center"

@@ -105,17 +105,22 @@ export const Footer = () => {
               <Button
                 color="inherit"
                 component={Link}
-                to="/legal/PrivacyPolicy">
-                {" "}
+                to="/legal/PrivacyPolicy"
+                sx={{ fontSize: { xs: "0.7rem", lg: "1rem" } }}>
                 Política de Privacidad
               </Button>
-              <Button color="inherit" component={Link} to="/legal/LegalNotice">
+              <Button
+                color="inherit"
+                component={Link}
+                to="/legal/LegalNotice"
+                sx={{ fontSize: { xs: "0.7rem", lg: "1rem" } }}>
                 Aviso Legal
               </Button>
               <Button
                 color="inherit"
                 component={Link}
-                to="/legal/CookiesPolicy">
+                to="/legal/CookiesPolicy"
+                sx={{ fontSize: { xs: "0.7rem", lg: "1rem" } }}>
                 Política de Cookies
               </Button>
             </>
@@ -142,7 +147,7 @@ export const Footer = () => {
                 textDecoration: "none",
                 color: "primary",
                 fontWeight: "bold",
-                mr: { sx: 0, md: "8rem" },
+                mr: { sx: 0, lg: "8rem" },
               }}>
               PabloBeRui
             </Box>

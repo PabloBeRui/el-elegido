@@ -25,7 +25,7 @@ import { useMediaQuery, useTheme } from "@mui/material";
 import { WeatherIcon } from "./helpers/WeatherIcon";
 
 export const NavMenu = () => {
-  // Creo el hook `drawerOpen` para controlar si el menú está abierto o cerrado.
+  // Creo el hook drawerOpen para controlar si el menú está abierto o cerrado.
 
   const [drawerOpen, setDrawerOpen] = useState(false);
 
@@ -45,8 +45,8 @@ export const NavMenu = () => {
 
   // Creo el menú  para dispositivos móviles.
   //Drawer es un componente de MUI que crea un menu deslizante, con anchor elijo su situación
-  // La propiedad `open` controla la visibilidad del Drawer (true para mostrarlo, false para ocultarlo).
-  // La propiedad `onClose` define qué acción debe realizarse cuando el Drawer se cierra (por ejemplo, cuando el usuario hace clic fuera del menú). En este caso, cambia el estado `drawerOpen` a false para cerrar el menú.
+  // La propiedad open controla la visibilidad del Drawer (true para mostrarlo, false para ocultarlo).
+  // La propiedad onClose define qué acción debe realizarse cuando el Drawer se cierra (por ejemplo, cuando el usuario hace clic fuera del menú). En este caso, cambia el estado drawerOpen a false para cerrar el menú.
   //He añadido la propiedad onClick={toggleDrawer(false)} para que el menu se cierre automaticamente al seleccionar un enlace
   const mobileMenu = (
     <Drawer anchor="left" open={drawerOpen} onClose={toggleDrawer(false)}>
@@ -95,7 +95,11 @@ export const NavMenu = () => {
   // dont repeat yourself
   // Asigno el ternario a una variable
 
-  const buttonTextSize = { fontSize: isTablet ? "0.65em" : "1.25rem" };
+  const buttonTextSize = {
+    fontSize: isTablet ? { xs: "0.5rem", md: "0.65rem" } : "1.25rem",
+    padding: { xs: "2px 4px" },
+    margin: { xs: "0px" }, // Reducir margen en xs
+  };
 
   const desktopMenu = (
     <Toolbar>
