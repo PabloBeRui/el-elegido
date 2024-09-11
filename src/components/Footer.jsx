@@ -131,14 +131,14 @@ export const Footer = () => {
           <IconButton
             color="inherit"
             component="a"
-            href="mailto:pablo.bellon.ruibal@hotmail.com"
+            href="mailto:el.elegido.restaurant.project@gmail.com?subject=Consulta&body=Hola, me gustaría obtener más información sobre su restaurante."
             title="Contacte con nosotros por email">
             <MailIcon />
           </IconButton>
           <IconButton
             color="inherit"
             component="a"
-            href="https://wa.me/+34670025720"
+            href="https://wa.me/+34670025720?text=Hola, me gustaría hacer una reserva en su restaurante."
             target="_blank"
             rel="noopener noreferrer"
             title="Contacte con nosotros por WhatsApp">
