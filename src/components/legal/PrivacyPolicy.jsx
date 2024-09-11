@@ -1,9 +1,19 @@
 import { Box, Typography, List, ListItem, ListItemText } from "@mui/material";
+import { useTheme } from "@emotion/react"; // Importo el hook para usar el tema personalizado
 
 export const PrivacyPolicy = () => {
+  const theme = useTheme(); // Uso el tema personalizado para aplicar los colores y otros estilos
+
   return (
-    <Box sx={{ padding: 4 }}>
-      <Typography variant="h4" gutterBottom color="primary.main">
+    <Box
+      sx={{
+        padding: 4,
+        border: `1px solid ${theme.palette.secondary.main}`, // Borde secundario
+        borderRadius: 2,
+        boxShadow: 1,
+        backgroundColor: "rgba(255, 255, 255, 0.8)", // Fondo blanco con transparencia
+      }}>
+      <Typography variant="h4" gutterBottom color="secondary.main">
         Política de Privacidad
       </Typography>
 
@@ -11,7 +21,7 @@ export const PrivacyPolicy = () => {
         En{" "}
         <Typography
           component="strong"
-          sx={{ fontWeight: "bold", color: "primary.main" }}>
+          sx={{ fontWeight: "bold", color: "secondary.main" }}>
           El Elegido
         </Typography>
         , nos tomamos muy en serio la privacidad de nuestros usuarios. En esta
@@ -22,7 +32,7 @@ export const PrivacyPolicy = () => {
         (LOPDGDD).
       </Typography>
 
-      <Typography variant="h5" gutterBottom color="primary.main">
+      <Typography variant="h5" gutterBottom color="secondary.main">
         Responsable del Tratamiento de Datos
       </Typography>
       <Typography variant="body1" paragraph>
@@ -33,7 +43,7 @@ export const PrivacyPolicy = () => {
           <ListItemText
             primary={
               <>
-                <Typography component="span" sx={{ color: "primary.main" }}>
+                <Typography component="span" sx={{ color: "secondary.main" }}>
                   Nombre:
                 </Typography>
                 {" El Elegido S.L.F.J."}
@@ -45,7 +55,7 @@ export const PrivacyPolicy = () => {
           <ListItemText
             primary={
               <>
-                <Typography component="span" sx={{ color: "primary.main" }}>
+                <Typography component="span" sx={{ color: "secondary.main" }}>
                   CIF:
                 </Typography>
                 {" B12345678"}
@@ -57,7 +67,7 @@ export const PrivacyPolicy = () => {
           <ListItemText
             primary={
               <>
-                <Typography component="span" sx={{ color: "primary.main" }}>
+                <Typography component="span" sx={{ color: "secondary.main" }}>
                   Dirección:
                 </Typography>
                 {" Calle Falsa 123, 28080 Madrid, España"}
@@ -69,7 +79,7 @@ export const PrivacyPolicy = () => {
           <ListItemText
             primary={
               <>
-                <Typography component="span" sx={{ color: "primary.main" }}>
+                <Typography component="span" sx={{ color: "secondary.main" }}>
                   Correo electrónico:
                 </Typography>
                 {" contacto@elegido.com"}
@@ -79,7 +89,7 @@ export const PrivacyPolicy = () => {
         </ListItem>
       </List>
 
-      <Typography variant="h5" gutterBottom color="primary.main">
+      <Typography variant="h5" gutterBottom color="secondary.main">
         Datos que Recopilamos
       </Typography>
       <Typography variant="body1" paragraph>
@@ -102,7 +112,7 @@ export const PrivacyPolicy = () => {
         </ListItem>
       </List>
 
-      <Typography variant="h5" gutterBottom color="primary.main">
+      <Typography variant="h5" gutterBottom color="secondary.main">
         Finalidades del Tratamiento de Datos
       </Typography>
       <Typography variant="body1" paragraph>
@@ -113,26 +123,26 @@ export const PrivacyPolicy = () => {
           <ListItemText
             primary="Gestión de reservas"
             secondary="Recopilamos datos para gestionar tus reservas y garantizar el mejor servicio posible."
-            primaryTypographyProps={{ sx: { color: "primary.main" } }}
+            primaryTypographyProps={{ sx: { color: "secondary.main" } }}
           />
         </ListItem>
         <ListItem>
           <ListItemText
             primary="Comunicación"
             secondary="Nos ponemos en contacto contigo para confirmar tus reservas o responder a tus consultas."
-            primaryTypographyProps={{ sx: { color: "primary.main" } }}
+            primaryTypographyProps={{ sx: { color: "secondary.main" } }}
           />
         </ListItem>
         <ListItem>
           <ListItemText
             primary="Mejora del servicio"
             secondary="Analizamos datos de navegación para mejorar la experiencia del usuario en nuestra web."
-            primaryTypographyProps={{ sx: { color: "primary.main" } }}
+            primaryTypographyProps={{ sx: { color: "secondary.main" } }}
           />
         </ListItem>
       </List>
 
-      <Typography variant="h5" gutterBottom color="primary.main">
+      <Typography variant="h5" gutterBottom color="secondary.main">
         Derechos de los Usuarios
       </Typography>
       <Typography variant="body1" paragraph>
@@ -141,7 +151,7 @@ export const PrivacyPolicy = () => {
         tratamiento de tus datos o ejercer tu derecho a la portabilidad.
       </Typography>
 
-      <Typography variant="h5" gutterBottom color="primary.main">
+      <Typography variant="h5" gutterBottom color="secondary.main">
         ¿Cómo ejercitar tus derechos?
       </Typography>
       <Typography variant="body1" paragraph>
@@ -152,7 +162,7 @@ export const PrivacyPolicy = () => {
           href="mailto:contacto@elegido.com"
           sx={{
             textDecoration: "none",
-            color: "primary.main",
+            color: "secondary.main",
             "&:hover": {
               textDecoration: "underline",
             },
@@ -163,7 +173,7 @@ export const PrivacyPolicy = () => {
         .
       </Typography>
 
-      <Typography variant="h5" gutterBottom color="primary.main">
+      <Typography variant="h5" gutterBottom color="secondary.main">
         Seguridad de los Datos
       </Typography>
       <Typography variant="body1" paragraph>
@@ -172,7 +182,7 @@ export const PrivacyPolicy = () => {
         mal uso o acceso no autorizado.
       </Typography>
 
-      <Typography variant="h5" gutterBottom color="primary.main">
+      <Typography variant="h5" gutterBottom color="secondary.main">
         Cambios en la Política de Privacidad
       </Typography>
       <Typography variant="body1" paragraph>
@@ -181,7 +191,7 @@ export const PrivacyPolicy = () => {
         que siempre estés informado sobre el tratamiento de tus datos.
       </Typography>
 
-      <Typography variant="h5" gutterBottom color="primary.main">
+      <Typography variant="h5" gutterBottom color="secondary.main">
         Contacto
       </Typography>
       <Typography variant="body1" paragraph>
@@ -193,7 +203,7 @@ export const PrivacyPolicy = () => {
           href="mailto:contacto@elegido.com"
           sx={{
             textDecoration: "none",
-            color: "primary.main",
+            color: "secondary.main",
             "&:hover": {
               textDecoration: "underline",
             },

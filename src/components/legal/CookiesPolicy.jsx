@@ -1,9 +1,19 @@
 import { Box, Typography, List, ListItem, ListItemText } from "@mui/material";
+import { useTheme } from "@emotion/react"; // Importo el hook para usar el tema personalizado
 
 export const CookiesPolicy = () => {
+  const theme = useTheme(); // Uso el tema personalizado para aplicar los colores y otros estilos
+
   return (
-    <Box sx={{ padding: 4 }}>
-      <Typography variant="h4" gutterBottom color="primary.main">
+    <Box
+      sx={{
+        padding: 4,
+        border: `1px solid ${theme.palette.secondary.main}`, // Borde secundario
+        borderRadius: 2,
+        boxShadow: 1,
+        backgroundColor: "rgba(255, 255, 255, 0.8)", // Fondo blanco con transparencia
+      }}>
+      <Typography variant="h4" gutterBottom color="secondary.main">
         Política de Cookies
       </Typography>
 
@@ -11,7 +21,7 @@ export const CookiesPolicy = () => {
         En{" "}
         <Typography
           component="strong"
-          sx={{ fontWeight: "bold", color: "primary.main" }}>
+          sx={{ fontWeight: "bold", color: "secondary.main" }}>
           El Elegido
         </Typography>
         , utilizamos cookies y tecnologías similares para mejorar la experiencia
@@ -21,7 +31,7 @@ export const CookiesPolicy = () => {
         puedes gestionarlas.
       </Typography>
 
-      <Typography variant="h5" gutterBottom color="primary.main">
+      <Typography variant="h5" gutterBottom color="secondary.main">
         ¿Qué son las cookies?
       </Typography>
       <Typography variant="body1" paragraph>
@@ -32,14 +42,14 @@ export const CookiesPolicy = () => {
         y mejorar la funcionalidad del sitio.
       </Typography>
 
-      <Typography variant="h5" gutterBottom color="primary.main">
+      <Typography variant="h5" gutterBottom color="secondary.main">
         Tipos de cookies que utilizamos
       </Typography>
       <Typography variant="body1" paragraph>
         En{" "}
         <Typography
           component="strong"
-          sx={{ fontWeight: "bold", color: "primary.main" }}>
+          sx={{ fontWeight: "bold", color: "secondary.main" }}>
           El Elegido
         </Typography>
         , utilizamos diferentes tipos de cookies:
@@ -51,33 +61,33 @@ export const CookiesPolicy = () => {
           <ListItemText
             primary="Cookies estrictamente necesarias"
             secondary="Son esenciales para que puedas navegar por nuestro sitio web y utilizar sus funciones, como acceder a áreas seguras o completar formularios."
-            primaryTypographyProps={{ sx: { color: "primary.main" } }}
+            primaryTypographyProps={{ sx: { color: "secondary.main" } }}
           />
         </ListItem>
         <ListItem>
           <ListItemText
             primary="Cookies de rendimiento"
             secondary="Nos permiten recopilar información sobre cómo los usuarios utilizan nuestra web. Toda la información es agregada y anónima."
-            primaryTypographyProps={{ sx: { color: "primary.main" } }}
+            primaryTypographyProps={{ sx: { color: "secondary.main" } }}
           />
         </ListItem>
         <ListItem>
           <ListItemText
             primary="Cookies de funcionalidad"
             secondary="Permiten que el sitio web recuerde las elecciones que realizas, como tu idioma preferido o la región en la que te encuentras."
-            primaryTypographyProps={{ sx: { color: "primary.main" } }}
+            primaryTypographyProps={{ sx: { color: "secondary.main" } }}
           />
         </ListItem>
         <ListItem>
           <ListItemText
             primary="Cookies de publicidad y marketing"
             secondary="Estas cookies se utilizan para mostrarte anuncios relevantes y personalizados basados en tus intereses."
-            primaryTypographyProps={{ sx: { color: "primary.main" } }}
+            primaryTypographyProps={{ sx: { color: "secondary.main" } }}
           />
         </ListItem>
       </List>
 
-      <Typography variant="h5" gutterBottom color="primary.main">
+      <Typography variant="h5" gutterBottom color="secondary.main">
         Cookies de terceros
       </Typography>
       <Typography variant="body1" paragraph>
@@ -86,7 +96,7 @@ export const CookiesPolicy = () => {
         propias cookies cuando interactúas con nuestro sitio web.
       </Typography>
 
-      <Typography variant="h5" gutterBottom color="primary.main">
+      <Typography variant="h5" gutterBottom color="secondary.main">
         ¿Cómo puedes gestionar las cookies?
       </Typography>
       <Typography variant="body1" paragraph>
@@ -100,33 +110,33 @@ export const CookiesPolicy = () => {
           <ListItemText
             primary="Google Chrome"
             secondary="Ve a Configuración > Privacidad y seguridad > Cookies y otros datos de sitios."
-            primaryTypographyProps={{ sx: { color: "primary.main" } }}
+            primaryTypographyProps={{ sx: { color: "secondary.main" } }}
           />
         </ListItem>
         <ListItem>
           <ListItemText
             primary="Mozilla Firefox"
             secondary="Ve a Opciones > Privacidad y seguridad > Cookies y datos del sitio."
-            primaryTypographyProps={{ sx: { color: "primary.main" } }}
+            primaryTypographyProps={{ sx: { color: "secondary.main" } }}
           />
         </ListItem>
         <ListItem>
           <ListItemText
             primary="Microsoft Edge"
             secondary="Ve a Configuración > Cookies y permisos del sitio."
-            primaryTypographyProps={{ sx: { color: "primary.main" } }}
+            primaryTypographyProps={{ sx: { color: "secondary.main" } }}
           />
         </ListItem>
         <ListItem>
           <ListItemText
             primary="Safari"
             secondary="Ve a Preferencias > Privacidad."
-            primaryTypographyProps={{ sx: { color: "primary.main" } }}
+            primaryTypographyProps={{ sx: { color: "secondary.main" } }}
           />
         </ListItem>
       </List>
 
-      <Typography variant="h5" gutterBottom color="primary.main">
+      <Typography variant="h5" gutterBottom color="secondary.main">
         Contacto
       </Typography>
       <Typography variant="body1" paragraph>
@@ -137,7 +147,7 @@ export const CookiesPolicy = () => {
           href="mailto:contacto@elegido.com"
           sx={{
             textDecoration: "none",
-            color: "primary.main",
+            color: "secondary.main",
             "&:hover": {
               textDecoration: "underline",
             },

@@ -1,9 +1,19 @@
 import { Box, Typography, List, ListItem, ListItemText } from "@mui/material";
+import { useTheme } from "@emotion/react"; // Importo el hook para usar el tema personalizado
 
 export const LegalNotice = () => {
+  const theme = useTheme(); // Uso el tema personalizado para aplicar los colores y otros estilos
+
   return (
-    <Box sx={{ padding: 4 }}>
-      <Typography variant="h4" gutterBottom color="primary.main">
+    <Box
+      sx={{
+        padding: 4,
+        border: `1px solid ${theme.palette.secondary.main}`, // Borde secundario
+        borderRadius: 2,
+        boxShadow: 1,
+        backgroundColor: "rgba(255, 255, 255, 0.8)", // Fondo blanco con transparencia
+      }}>
+      <Typography variant="h4" gutterBottom color="secondary.main">
         Aviso Legal
       </Typography>
 
@@ -11,7 +21,7 @@ export const LegalNotice = () => {
         En{" "}
         <Typography
           component="strong"
-          sx={{ fontWeight: "bold", color: "primary.main" }}>
+          sx={{ fontWeight: "bold", color: "secondary.main" }}>
           El Elegido
         </Typography>
         , nos comprometemos a cumplir con las disposiciones legales vigentes en
@@ -21,7 +31,7 @@ export const LegalNotice = () => {
         (RGPD).
       </Typography>
 
-      <Typography variant="h5" gutterBottom color="primary.main">
+      <Typography variant="h5" gutterBottom color="secondary.main">
         Responsable del Sitio Web
       </Typography>
       <Typography variant="body1" paragraph>
@@ -32,7 +42,7 @@ export const LegalNotice = () => {
           <ListItemText
             primary={
               <>
-                <Typography component="span" sx={{ color: "primary.main" }}>
+                <Typography component="span" sx={{ color: "secondary.main" }}>
                   Nombre:
                 </Typography>
                 {" El Elegido S.L.F.J."}
@@ -44,7 +54,7 @@ export const LegalNotice = () => {
           <ListItemText
             primary={
               <>
-                <Typography component="span" sx={{ color: "primary.main" }}>
+                <Typography component="span" sx={{ color: "secondary.main" }}>
                   CIF:
                 </Typography>
                 {" B12345678"}
@@ -56,7 +66,7 @@ export const LegalNotice = () => {
           <ListItemText
             primary={
               <>
-                <Typography component="span" sx={{ color: "primary.main" }}>
+                <Typography component="span" sx={{ color: "secondary.main" }}>
                   Dirección:
                 </Typography>
                 {" Calle Fake 123, 15011 A Coruña"}
@@ -68,7 +78,7 @@ export const LegalNotice = () => {
           <ListItemText
             primary={
               <>
-                <Typography component="span" sx={{ color: "primary.main" }}>
+                <Typography component="span" sx={{ color: "secondary.main" }}>
                   Correo electrónico:
                 </Typography>
                 {" contacto@elegido.com"}
@@ -78,7 +88,7 @@ export const LegalNotice = () => {
         </ListItem>
       </List>
 
-      <Typography variant="h5" gutterBottom color="primary.main">
+      <Typography variant="h5" gutterBottom color="secondary.main">
         Condiciones de Uso
       </Typography>
       <Typography variant="body1" paragraph>
@@ -90,26 +100,26 @@ export const LegalNotice = () => {
           <ListItemText
             primary="Propiedad Intelectual"
             secondary="Todos los contenidos, incluidos textos, imágenes, logotipos y otros materiales, son propiedad de El Elegido S.L.F.J. o de terceros que han autorizado su uso en esta web. Está prohibida su reproducción, distribución o modificación sin autorización previa."
-            primaryTypographyProps={{ sx: { color: "primary.main" } }}
+            primaryTypographyProps={{ sx: { color: "secondary.main" } }}
           />
         </ListItem>
         <ListItem>
           <ListItemText
             primary="Responsabilidad del Usuario"
             secondary="El usuario se compromete a hacer un uso adecuado de los contenidos y servicios ofrecidos en esta web, y a no utilizarlos para actividades ilícitas o contrarias a la buena fe."
-            primaryTypographyProps={{ sx: { color: "primary.main" } }}
+            primaryTypographyProps={{ sx: { color: "secondary.main" } }}
           />
         </ListItem>
         <ListItem>
           <ListItemText
             primary="Enlaces Externos"
             secondary="Este sitio web puede contener enlaces a otros sitios web gestionados por terceros. No nos hacemos responsables del contenido o la política de privacidad de dichos sitios."
-            primaryTypographyProps={{ sx: { color: "primary.main" } }}
+            primaryTypographyProps={{ sx: { color: "secondary.main" } }}
           />
         </ListItem>
       </List>
 
-      <Typography variant="h5" gutterBottom color="primary.main">
+      <Typography variant="h5" gutterBottom color="secondary.main">
         Protección de Datos
       </Typography>
       <Typography variant="body1" paragraph>
@@ -120,7 +130,7 @@ export const LegalNotice = () => {
         formulario.
       </Typography>
 
-      <Typography variant="h5" gutterBottom color="primary.main">
+      <Typography variant="h5" gutterBottom color="secondary.main">
         Legislación Aplicable y Jurisdicción
       </Typography>
       <Typography variant="body1" paragraph>
@@ -129,7 +139,7 @@ export const LegalNotice = () => {
         los tribunales de Madrid, España.
       </Typography>
 
-      <Typography variant="h5" gutterBottom color="primary.main">
+      <Typography variant="h5" gutterBottom color="secondary.main">
         Contacto
       </Typography>
       <Typography variant="body1" paragraph>
@@ -140,7 +150,7 @@ export const LegalNotice = () => {
           href="mailto:contacto@elegido.com"
           sx={{
             textDecoration: "none",
-            color: "primary.main",
+            color: "secondary.main",
             "&:hover": {
               textDecoration: "underline",
             },
