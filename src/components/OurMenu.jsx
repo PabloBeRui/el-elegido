@@ -1,5 +1,5 @@
 import { useTheme } from "@emotion/react";
-import { Box, Typography } from "@mui/material";
+import { Box, Button, Typography } from "@mui/material";
 //Listas propias de MUI
 //List->ul || ol  ListItem->li ListItemText->texto del li ListSubheader-> encabezado
 import { List, ListItem, ListItemText, ListSubheader } from "@mui/material";
@@ -36,6 +36,7 @@ export const OurMenu = () => {
               backgroundColor: "secondary.main",
               fontSize: "1.2rem",
               fontWeight: "bold",
+              textAlign: "center",
             }}>
             APERITIVOS
           </ListSubheader>
@@ -75,6 +76,7 @@ export const OurMenu = () => {
               backgroundColor: "secondary.main",
               fontSize: "1.2rem",
               fontWeight: "bold",
+              textAlign: "center",
             }}>
             ENTRANTES
           </ListSubheader>
@@ -114,6 +116,7 @@ export const OurMenu = () => {
               backgroundColor: "secondary.main",
               fontSize: "1.2rem",
               fontWeight: "bold",
+              textAlign: "center",
             }}>
             PLATOS PRINCIPALES
           </ListSubheader>
@@ -189,6 +192,7 @@ export const OurMenu = () => {
               backgroundColor: "secondary.main",
               fontSize: "1.2rem",
               fontWeight: "bold",
+              textAlign: "center",
             }}>
             POSTRES
           </ListSubheader>
@@ -228,6 +232,7 @@ export const OurMenu = () => {
               backgroundColor: "secondary.main",
               fontSize: "1.2rem",
               fontWeight: "bold",
+              textAlign: "center",
             }}>
             VINOS
           </ListSubheader>
@@ -279,6 +284,7 @@ export const OurMenu = () => {
               backgroundColor: "secondary.main",
               fontSize: "1.2rem",
               fontWeight: "bold",
+              textAlign: "center",
             }}>
             CÓCTELES Y COMBINADOS
           </ListSubheader>
@@ -320,6 +326,17 @@ export const OurMenu = () => {
           />
         </ListItem>
       </List>
+      {/* Enlace para descargar el PDF de la carta */}
+      <Box sx={{ textAlign: "center", marginTop: 4 }}>
+        <Button
+          variant="contained"
+          sx={{ color: "primary.main", backgroundColor: "secondary.main" }}
+          href="/media/pdf/menu.pdf"
+          target="_blank"
+          download="Menu_El_ELegido.pdf">
+          Descargar Carta
+        </Button>
+      </Box>
     </Box>
   );
 };

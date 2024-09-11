@@ -54,16 +54,15 @@ export const OurRestaurant = () => {
           ...sxBoxSettings,
           fontFamily: "GreatVibes",
           fontSize: { xs: "2.4rem", md: "4rem" },
-          position: { xs: "relative", lg: "absolute" }, // Absoluto en pantallas grandes
-          mb:{lg:45},
-      bottom: { lg: "20px" }, // Ajuste en pantallas grandes
+          alignItems:"flex-end",
+
+          bottom: { lg: "20px" }, // Ajuste en pantallas grandes
           right: { lg: "20px" }, // Ajuste en pantallas grandes
-      textAlign:"center"
+          textAlign: "center",
         }}
         variant="h5"
         align="center"
         color="primary">
-       
         "El Arte de Comer Bien"
       </Typography>
     </Box>

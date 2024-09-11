@@ -100,35 +100,65 @@ export const NavMenu = () => {
         color="inherit"
         component={Link}
         to="/our-restaurant"
-        sx={{ fontSize: "1.25rem" }}>
+        sx={{
+          fontSize: {
+            xs: "0.8rem",
+            sm: "1rem",
+            md: "1rem",
+          },
+        }}>
         Nuestro Restaurante
       </Button>
       <Button
         color="inherit"
         component={Link}
         to="/group-menu"
-        sx={{ fontSize: "1.25rem" }}>
+        sx={{
+          fontSize: {
+            xs: "0.8rem",
+            sm: "1rem",
+            md: "1rem",
+          },
+        }}>
         Menús de Grupo
       </Button>
       <Button
         color="inherit"
         component={Link}
         to="/house-specialties"
-        sx={{ fontSize: "1.25rem" }}>
+        sx={{
+          fontSize: {
+            xs: "0.8rem",
+            sm: "1rem",
+            md: "1rem",
+          },
+        }}>
         Especialidades de la Casa
       </Button>
       <Button
         color="inherit"
         component={Link}
         to="/reservations"
-        sx={{ fontSize: "1.25rem" }}>
+        sx={{
+          fontSize: {
+            xs: "0.8rem",
+            sm: "1rem",
+            md: "1rem",
+          },
+        }}>
         Reservas
       </Button>
       <Button
         color="inherit"
         component={Link}
         to="/our-menu"
-        sx={{ fontSize: "1.25rem" }}>
+        sx={{
+          fontSize: {
+            xs: "0.8rem",
+            sm: "1rem",
+            md: "1rem",
+          },
+        }}>
         Nuestra Carta
       </Button>
     </Toolbar>
