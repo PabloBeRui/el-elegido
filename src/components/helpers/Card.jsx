@@ -60,7 +60,7 @@ export const Card = ({ title, image, description }) => {
           transition: "filter 0.6s ease",
         }}>
         {/* Título con color primario */}
-        <Typography variant="h6" gutterBottom color="primary">
+        <Typography variant="h6" gutterBottom color="secondary">
           {title}
         </Typography>
         {/* Descripción con animación de blur */}

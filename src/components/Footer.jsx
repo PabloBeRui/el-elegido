@@ -68,7 +68,7 @@ export const Footer = () => {
     <AppBar
       position="static"
       component="footer"
-      sx={{ backgroundColor: "rgba(44, 44, 44, 0.1)" }}>
+      sx={{ backgroundColor: "rgba(44, 44, 44, 0.1)", color: "#f0f0f0" }}>
       <Box
         sx={{
           display: "flex",

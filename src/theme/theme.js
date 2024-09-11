@@ -5,14 +5,14 @@ export const ELElegidoTheme = createTheme({
   // Colores personalizados
   palette: {
     primary: {
-      main: "#2C2C2C",
+      main: "#f0f0f0",
     },
     secondary: {
-      main: "#A5B2C2",
+      main: "#4F5B69",
     },
     custom: {
       mainphrase: "#c89f77", // Color cobre para el texto principal
-    }
+    },
   },
   // Puedes personalizar otros aspectos del tema aquí, como tipografía, espaciados, etc.
 });

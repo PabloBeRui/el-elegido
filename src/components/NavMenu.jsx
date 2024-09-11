@@ -124,7 +124,9 @@ export const NavMenu = () => {
   );
 
   return (
-    <AppBar position="static" sx={{ backgroundColor: "rgba(44, 44, 44, 0.1)" }}>
+    <AppBar
+      position="static"
+      sx={{ backgroundColor: "rgba(44, 44, 44, 0.1)", color: "#f0f0f0" }}>
       <Toolbar>
         {isMobileOrTablet ? (
           <Box

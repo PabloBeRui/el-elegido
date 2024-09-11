@@ -59,7 +59,7 @@ export const OurRestaurant = () => {
         }}
         variant="h5"
         align="center"
-        color="#FFFFFF">
+        color="#f0f0f0">
         "El Arte de Comer Bien"
       </Typography>
     </Box>
