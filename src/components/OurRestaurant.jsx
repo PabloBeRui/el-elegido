@@ -2,13 +2,12 @@ import { Box, Typography } from "@mui/material"; // importo Box de MUI para orga
 import { Carrusel } from "./helpers/Carrusel";
 import { createArrayImagesOurRestaurant } from "./helpers/createArrayImagesOurRestaurant.js";
 
-
 // Configuro el carrusel de react-SliderTrack, para ello consigo una configuración predefinida y ajusto ciertos parámetros, con un comentario en cada uno para futuras modificaciones.
 
 const sliderSettings = {
   dots: true, // Muestra los puntos de navegación en la parte inferior del carrusel
   infinite: true, // Permite que el carrusel se desplace en un bucle infinito
-  speed: 500, // Velocidad de transición entre las imágenes (en milisegundos)
+  speed: 400, // Velocidad de transición entre las imágenes (en milisegundos)
   slidesToShow: 1, // Número de imágenes visibles a la vez (en este caso, una imagen por vez)
   slidesToScroll: 1, // Número de imágenes que se desplazarán cuando se navegue en el carrusel
   autoplay: true, // Habilita el desplazamiento automático de las imágenes
@@ -33,7 +32,7 @@ const sxBoxSettings = {
 
 const sxFlexBoxSettings = {
   display: "flex",
-  flexDirection: "column",
+  flexDirection: { xs: "column", lg: "row" },
   justifyContent: "space-around", // Separa el carrusel y el texto en la pantalla
   alignItems: "center", // Centra los elementos en el eje secundario (horizontal)
   height: "80vh", // Usar todo el espacio disponible en la pantalla
@@ -42,7 +41,6 @@ const sxFlexBoxSettings = {
 export const OurRestaurant = () => {
   // Genero un array de rutas de imágenes usando la función createArrayImagesOurRestaurant
   const images = createArrayImagesOurRestaurant(8);
-
 
   return (
     <Box sx={{ ...sxBoxSettings, ...sxFlexBoxSettings }}>
@@ -54,12 +52,18 @@ export const OurRestaurant = () => {
       <Typography
         sx={{
           ...sxBoxSettings,
-          fontFamily: "GreatVibes, serif",
+          fontFamily: "GreatVibes",
           fontSize: { xs: "2.4rem", md: "4rem" },
+          position: { xs: "relative", lg: "absolute" }, // Absoluto en pantallas grandes
+          mb:{lg:45},
+      bottom: { lg: "20px" }, // Ajuste en pantallas grandes
+          right: { lg: "20px" }, // Ajuste en pantallas grandes
+      textAlign:"center"
         }}
         variant="h5"
         align="center"
-        color="#f0f0f0">
+        color="primary">
+       
         "El Arte de Comer Bien"
       </Typography>
     </Box>

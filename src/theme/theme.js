@@ -14,5 +14,4 @@ export const ELElegidoTheme = createTheme({
       mainphrase: "#c89f77", // Color cobre para el texto principal
     },
   },
-  // Puedes personalizar otros aspectos del tema aquí, como tipografía, espaciados, etc.
 });

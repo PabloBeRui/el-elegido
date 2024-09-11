@@ -85,11 +85,12 @@ export const Reservations = () => {
         <Typography
           sx={{
             textAlign: "center",
-            mt: 2,
+            mt: { xs: 1, md: 2 },
             mb: 3,
-          }} color="secondary">
-          ¿Quieres reservar una experiencia culinaria con nosotros? Solicítala
-          Aquí
+          }}
+          color="secondary"
+          fontFamily={"cinzel"}>
+          ¿ Le Apetece una Experiencia Culinaria?
         </Typography>
 
         {/* Formulario */}
@@ -104,7 +105,7 @@ export const Reservations = () => {
             width: "100%",
             margin: "0 auto",
             gap: 0.5,
-          }} >
+          }}>
           {/* inputProps -> propiedad de MUI para uso de expresiones regulares */}
           <TextField
             name="name"
@@ -183,7 +184,11 @@ export const Reservations = () => {
           </Button>
         </Box>
 
-        <Typography sx={{ textAlign: "center" }}>
+        <Typography
+          sx={{
+            textAlign: "center",
+            fontSize: { xs: "0.8rem", md: "1rem" },
+          }}>
           Martes a Domingo de 12:00 a 18:00 y de 20:00 a 3:00
         </Typography>
 

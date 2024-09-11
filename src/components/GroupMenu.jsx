@@ -36,7 +36,7 @@ export const GroupMenu = () => {
         justifyContent: "center",
         alignItems: "center",
       }}>
-      <Typography variant="h4" align="center" color="#FFFFFF" gutterBottom sx={{ mt: 2 }}>
+      <Typography variant="h4" align="center" color="#FFFFFF" gutterBottom sx={{ mt: 2, fontFamily: "GreatVibes" }}>
         Menús de Grupo
       </Typography>
       ;

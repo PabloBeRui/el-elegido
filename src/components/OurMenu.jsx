@@ -1,14 +1,29 @@
+import { useTheme } from "@emotion/react";
 import { Box, Typography } from "@mui/material";
 //Listas propias de MUI
 //List->ul || ol  ListItem->li ListItemText->texto del li ListSubheader-> encabezado
 import { List, ListItem, ListItemText, ListSubheader } from "@mui/material";
 import { Link } from "react-router-dom";
 
-
 export const OurMenu = () => {
+  const theme = useTheme();
   return (
-    <Box sx={{ maxWidth: 600, margin: "0 auto", padding: 2 }}>
-      <Typography variant="h4" align="center" gutterBottom>
+    <Box
+      sx={{
+        maxWidth: 600,
+        margin: "0 auto",
+        padding: 2,
+        border: `1px solid ${theme.palette.secondary.main}`, // Borde secundario
+        borderRadius: 2,
+        boxShadow: 1,
+        backgroundColor: "rgba(255, 255, 255, 0.8)", // Fondo blanco con transparencia
+      }}>
+      <Typography
+        variant="h4"
+        align="center"
+        gutterBottom
+        color="secondary"
+        sx={{ fontFamily: "GreatVibes" }}>
         Nuestra Carta
       </Typography>
 
@@ -18,6 +33,7 @@ export const OurMenu = () => {
           <ListSubheader
             sx={{
               color: "primary.main",
+              backgroundColor: "secondary.main",
               fontSize: "1.2rem",
               fontWeight: "bold",
             }}>
@@ -56,6 +72,7 @@ export const OurMenu = () => {
           <ListSubheader
             sx={{
               color: "primary.main",
+              backgroundColor: "secondary.main",
               fontSize: "1.2rem",
               fontWeight: "bold",
             }}>
@@ -94,6 +111,7 @@ export const OurMenu = () => {
           <ListSubheader
             sx={{
               color: "primary.main",
+              backgroundColor: "secondary.main",
               fontSize: "1.2rem",
               fontWeight: "bold",
             }}>
@@ -168,6 +186,7 @@ export const OurMenu = () => {
           <ListSubheader
             sx={{
               color: "primary.main",
+              backgroundColor: "secondary.main",
               fontSize: "1.2rem",
               fontWeight: "bold",
             }}>
@@ -206,6 +225,7 @@ export const OurMenu = () => {
           <ListSubheader
             sx={{
               color: "primary.main",
+              backgroundColor: "secondary.main",
               fontSize: "1.2rem",
               fontWeight: "bold",
             }}>
@@ -256,6 +276,7 @@ export const OurMenu = () => {
           <ListSubheader
             sx={{
               color: "primary.main",
+              backgroundColor: "secondary.main",
               fontSize: "1.2rem",
               fontWeight: "bold",
             }}>

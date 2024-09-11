@@ -41,7 +41,7 @@ export const HouseSpecialties = () => {
         align="center"
         color="#FFFFFF"
         gutterBottom
-        sx={{ mt: 2 }}>
+        sx={{ mt: 2, fontFamily: "GreatVibes" }}>
         Especialidades de la Casa
       </Typography>
       {
