@@ -40,8 +40,19 @@ export const NavMenu = () => {
   };
 
   // Menú para dispositivos móviles y tablets
+
+  //hago referencia al selector principal de mui con & para poder modificar el fondo del drawer cuando está abierto
   const mobileMenu = (
-    <Drawer anchor="left" open={drawerOpen} onClose={toggleDrawer(false)}>
+    <Drawer
+      anchor="left"
+      open={drawerOpen}
+      onClose={toggleDrawer(false)}
+      sx={{
+        "& .MuiPaper-root": {
+          backgroundColor: "rgba(79, 91, 105, 0.9)", // secondary.main con transparencia
+          color: theme.palette.primary.main, // Texto en color primary.main
+        },
+      }}>
       <List>
         <ListItem
           button

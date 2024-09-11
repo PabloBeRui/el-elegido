@@ -18,8 +18,11 @@ import LocationOnIcon from "@mui/icons-material/LocationOn";
 //React
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { useTheme } from "@emotion/react";
 
 export const Footer = () => {
+  const theme = useTheme();
+
   // Creo un useState para el menú deslizante, para manejar si está abierto o cerrado.
   const [drawerOpen, setDrawerOpen] = useState(false);
 
@@ -34,7 +37,12 @@ export const Footer = () => {
       anchor="bottom" // Coloco el menú en la parte inferior de la pantalla.
       open={drawerOpen} // Controla si el menú está visible basado en el valor del estado drawerOpen.
       onClose={toggleDrawer(false)} // Al cerrar el menú, cambia el estado drawerOpen a false.
-    >
+      sx={{
+        "& .MuiPaper-root": {
+          backgroundColor: "rgba(79, 91, 105, 0.8)", // secondary.main con transparencia
+          color: theme.palette.primary.main, // Texto en color primary.main
+        },
+      }}>
       <List>
         {/* Cada ListItem es un botón dentro del menú deslizante */}
         <ListItem
