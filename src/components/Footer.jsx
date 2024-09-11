@@ -68,7 +68,7 @@ export const Footer = () => {
     <AppBar
       position="static"
       component="footer"
-      sx={{ backgroundColor: "primary" }}>
+      sx={{ backgroundColor: "rgba(44, 44, 44, 0.1)" }}>
       <Box
         sx={{
           display: "flex",
@@ -80,7 +80,10 @@ export const Footer = () => {
         {/* Sección 1 - Menú */}
         <Box>
           {/* El icono de Policy abre el drawer*/}
-          <IconButton color="inherit" onClick={toggleDrawer(true)}>
+          <IconButton
+            color="inherit"
+            onClick={toggleDrawer(true)}
+            title="Información Legal">
             <PolicyIcon />
           </IconButton>
           {/* Renderizo el menú deslizante para políticas */}
@@ -89,6 +92,7 @@ export const Footer = () => {
 
         {/* Sección 2 - Nombre y copyright */}
         <Box>
+          {/* rel="noopener noreferrer" para mejorar seguridad y privacidad al target _blank */}
           <Typography
             variant="body2"
             align="center"
@@ -119,7 +123,8 @@ export const Footer = () => {
           <IconButton
             color="inherit"
             component="a"
-            href="mailto:pablo.bellon.ruibal@hotmail.com">
+            href="mailto:pablo.bellon.ruibal@hotmail.com"
+            title="Contacte con nosotros por email">
             <MailIcon />
           </IconButton>
           <IconButton
@@ -127,7 +132,8 @@ export const Footer = () => {
             component="a"
             href="https://wa.me/+34670025720"
             target="_blank"
-            rel="noopener noreferrer">
+            rel="noopener noreferrer"
+            title="Contacte con nosotros por WhatsApp">
             <WhatsAppIcon />
           </IconButton>
           <IconButton
@@ -135,10 +141,15 @@ export const Footer = () => {
             component="a"
             href="https://www.instagram.com/instagram"
             target="_blank"
-            rel="noopener noreferrer">
+            rel="noopener noreferrer"
+            title="Visite Nuestro Instagram">
             <InstagramIcon />
           </IconButton>
-          <IconButton color="inherit" component={Link} to="/OurLocation">
+          <IconButton
+            color="inherit"
+            component={Link}
+            to="/OurLocation"
+            title="Encuentre nuestro Restaurante">
             <LocationOnIcon />
           </IconButton>
         </Box>
