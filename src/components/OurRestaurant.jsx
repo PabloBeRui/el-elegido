@@ -2,6 +2,7 @@ import { Box, Typography } from "@mui/material"; // importo Box de MUI para orga
 import { Carrusel } from "./helpers/Carrusel";
 import { createArrayImagesOurRestaurant } from "./helpers/createArrayImagesOurRestaurant.js";
 
+
 // Configuro el carrusel de react-SliderTrack, para ello consigo una configuración predefinida y ajusto ciertos parámetros, con un comentario en cada uno para futuras modificaciones.
 
 const sliderSettings = {
@@ -42,6 +43,7 @@ export const OurRestaurant = () => {
   // Genero un array de rutas de imágenes usando la función createArrayImagesOurRestaurant
   const images = createArrayImagesOurRestaurant(8);
 
+
   return (
     <Box sx={{ ...sxBoxSettings, ...sxFlexBoxSettings }}>
       {/* Creo un Box de Material-UI y le aplico estilos con su propiedad sx y los valores de mi variable para manejar el layout y centrar el carrusel en la página*/}
@@ -53,11 +55,11 @@ export const OurRestaurant = () => {
         sx={{
           ...sxBoxSettings,
           fontFamily: "GreatVibes, serif",
-          fontSize: {xs:"2.4rem",md:"4rem"},
+          fontSize: { xs: "2.4rem", md: "4rem" },
         }}
         variant="h5"
         align="center"
-        color="primary">
+        color="#FFFFFF">
         "El Arte de Comer Bien"
       </Typography>
     </Box>

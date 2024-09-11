@@ -36,7 +36,12 @@ export const HouseSpecialties = () => {
         alignItems: "center",
       }}>
       {/* mt:2 -> 2*8 px */}
-      <Typography variant="h4" align="center" gutterBottom sx={{ mt: 2 }}>
+      <Typography
+        variant="h4"
+        align="center"
+        color="#FFFFFF"
+        gutterBottom
+        sx={{ mt: 2 }}>
         Especialidades de la Casa
       </Typography>
       {
