@@ -1,6 +1,6 @@
 import { Box, Typography } from "@mui/material";
 
-import { Card } from "./helpers/Card";
+import { Card } from "../helpers/Card";
 
 const route = "/media/images/GroupMenu/";
 
@@ -36,7 +36,12 @@ export const GroupMenu = () => {
         justifyContent: "center",
         alignItems: "center",
       }}>
-      <Typography variant="h4" align="center" color="#FFFFFF" gutterBottom sx={{ mt: 2, fontFamily: "GreatVibes" }}>
+      <Typography
+        variant="h4"
+        align="center"
+        color="#FFFFFF"
+        gutterBottom
+        sx={{ mt: 2, fontFamily: "GreatVibes" }}>
         Menús de Grupo
       </Typography>
       ;

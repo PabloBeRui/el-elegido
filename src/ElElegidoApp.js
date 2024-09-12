@@ -6,17 +6,17 @@ import { NavMenu } from "./components/NavMenu";
 // Importo el componente BrowseRouter para poder navegar entre componentes sin recargar toda la página
 //Para ello he instalado la biblioteca react-router-dom
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { Reservations } from "./components/Reservations";
+import { Reservations } from "./components/pages/Reservations";
 
-import { GroupMenu } from "./components/GroupMenu";
-import { HouseSpecialties } from "./components/HouseSpecialties";
-import { OurRestaurant } from "./components/OurRestaurant";
-import { OurMenu } from "./components/OurMenu";
-import { OurLocation } from "./components/OurLocation";
+import { GroupMenu } from "./components/pages/GroupMenu";
+import { HouseSpecialties } from "./components/pages/HouseSpecialties";
+import { OurRestaurant } from "./components/pages/OurRestaurant";
+import { OurMenu } from "./components/pages/OurMenu";
+import { OurLocation } from "./components/pages/OurLocation";
 //Rutas legal
-import { PrivacyPolicy } from "./components/legal/PrivacyPolicy";
-import { LegalNotice } from "./components/legal/LegalNotice";
-import { CookiesPolicy } from "./components/legal/CookiesPolicy";
+import { PrivacyPolicy } from "./components/pages/legal/PrivacyPolicy";
+import { LegalNotice } from "./components/pages/legal/LegalNotice";
+import { CookiesPolicy } from "./components/pages/legal/CookiesPolicy";
 
 //MUI
 import { Box, ThemeProvider } from "@mui/material";

@@ -1,6 +1,6 @@
 import { Box, Typography } from "@mui/material"; // importo Box de MUI para organizar el layout
-import { Carrusel } from "./helpers/Carrusel";
-import { createArrayImagesOurRestaurant } from "./helpers/createArrayImagesOurRestaurant.js";
+import { Carrusel } from "../helpers/Carrusel.jsx";
+import { createArrayImagesOurRestaurant } from "../helpers/createArrayImagesOurRestaurant.js";
 
 // Configuro el carrusel de react-SliderTrack, para ello consigo una configuración predefinida y ajusto ciertos parámetros, con un comentario en cada uno para futuras modificaciones.
 
@@ -54,7 +54,7 @@ export const OurRestaurant = () => {
           ...sxBoxSettings,
           fontFamily: "GreatVibes",
           fontSize: { xs: "2.4rem", md: "4rem" },
-          alignItems:"flex-end",
+          alignItems: "flex-end",
 
           bottom: { lg: "20px" }, // Ajuste en pantallas grandes
           right: { lg: "20px" }, // Ajuste en pantallas grandes

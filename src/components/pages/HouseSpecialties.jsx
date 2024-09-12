@@ -1,6 +1,6 @@
 import { Box, Typography } from "@mui/material";
 
-import { Card } from "./helpers/Card";
+import { Card } from "../helpers/Card";
 
 const route = "/media/images/HouseSpecialties/";
 

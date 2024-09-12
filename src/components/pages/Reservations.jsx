@@ -21,8 +21,8 @@ import { es } from "date-fns/locale";
 import {
   shouldDisableDate,
   shouldDisableTime,
-} from "./helpers/dateTimePickerRestrictions.js";
-import { sendEmail } from "./helpers/sendEmail.js";
+} from "../helpers/dateTimePickerRestrictions.js";
+import { sendEmail } from "../helpers/sendEmail.js";
 import { useTheme } from "@emotion/react";
 
 export const Reservations = () => {
@@ -30,10 +30,10 @@ export const Reservations = () => {
   const theme = useTheme();
 
   //Creo un día para poner por defecto en el DateTimePicker
-  const defaultDate = new Date()
-  defaultDate.setDate(defaultDate.getDate() + 1)
-  defaultDate.setHours(12)
-  defaultDate.setMinutes(0)
+  const defaultDate = new Date();
+  defaultDate.setDate(defaultDate.getDate() + 1);
+  defaultDate.setHours(12);
+  defaultDate.setMinutes(0);
 
   // Voy a crear un useState para controlar la solicitud del día y la hora
   const [selectDate, setSelectDate] = useState(defaultDate);
@@ -183,7 +183,7 @@ export const Reservations = () => {
             type="submit"
             variant="contained"
             color="secondary"
-            sx={{ mb: {xs:2,lg:3}, display: "block" }}>
+            sx={{ mb: { xs: 2, lg: 3 }, display: "block" }}>
             Solicitar Reserva
           </Button>
         </Box>
