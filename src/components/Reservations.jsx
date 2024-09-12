@@ -29,8 +29,14 @@ export const Reservations = () => {
   // Tema personalizado
   const theme = useTheme();
 
+  //Creo un día para poner por defecto en el DateTimePicker
+  const defaultDate = new Date()
+  defaultDate.setDate(defaultDate.getDate() + 1)
+  defaultDate.setHours(12)
+  defaultDate.setMinutes(0)
+
   // Voy a crear un useState para controlar la solicitud del día y la hora
-  const [selectDate, setSelectDate] = useState(new Date());
+  const [selectDate, setSelectDate] = useState(defaultDate);
 
   // Función para manejar el cambio de fecha
   const handleDateChange = (updatedValue) => {
@@ -177,8 +183,8 @@ export const Reservations = () => {
             type="submit"
             variant="contained"
             color="secondary"
-            sx={{ mb: 3, display: "block" }}>
-            Reservar
+            sx={{ mb: {xs:2,lg:3}, display: "block" }}>
+            Solicitar Reserva
           </Button>
         </Box>
 

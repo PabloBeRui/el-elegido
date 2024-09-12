@@ -99,7 +99,7 @@ export const Footer = () => {
         </Box>
 
         {/* Sección 2 - Nombre y copyright */}
-        <Box>
+        <Box sx={{ ml: { md: 15 } }}>
           {/* rel="noopener noreferrer" para mejorar seguridad y privacidad al target _blank */}
           <Typography
             variant="body2"

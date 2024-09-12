@@ -212,7 +212,16 @@ export const NavMenu = () => {
             {/* Nombre del restaurante */}
             <Typography
               variant="h2"
-              sx={{ fontSize: "2.5rem", fontFamily: "Cinzel, serif" }}
+              sx={{
+                fontSize: {
+                  xs: "2rem",
+                  sm: "2.2rem",
+                  md: "2.5rem",
+                  lg: "2rem",
+                  xl: "2.5rem",
+                },
+                fontFamily: "Cinzel, serif",
+              }}
               component="div">
               El Elegido Restaurant
             </Typography>

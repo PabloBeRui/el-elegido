@@ -19,7 +19,7 @@ import { LegalNotice } from "./components/legal/LegalNotice";
 import { CookiesPolicy } from "./components/legal/CookiesPolicy";
 
 //MUI
-import { Box, CssBaseline, ThemeProvider } from "@mui/material";
+import { Box, ThemeProvider } from "@mui/material";
 
 //importo globalmente  react-slick (que depende de las hojas de estilo de slick-carousel para funcionar correctamente), requerido para su correcto funcionamiento.
 
