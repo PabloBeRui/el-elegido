@@ -3,7 +3,6 @@ import { Carrusel } from "../Carrusel.jsx";
 import { createArrayImagesOurRestaurant } from "../helpers/createArrayImagesOurRestaurant.js";
 
 // Configuro el carrusel de react-SliderTrack, para ello consigo una configuración predefinida y ajusto ciertos parámetros, con un comentario en cada uno para futuras modificaciones.
-
 const sliderSettings = {
   dots: true, // Muestra los puntos de navegación en la parte inferior del carrusel
   infinite: true, // Permite que el carrusel se desplace en un bucle infinito
@@ -11,15 +10,14 @@ const sliderSettings = {
   slidesToShow: 1, // Número de imágenes visibles a la vez (en este caso, una imagen por vez)
   slidesToScroll: 1, // Número de imágenes que se desplazarán cuando se navegue en el carrusel
   autoplay: true, // Habilita el desplazamiento automático de las imágenes
-  arrows: false,
+  arrows: false, // Flechas para pasar fotos
 };
 
-// Creo una variable con los valores sx de Box
-
+// Creo una variable con los valores sx de Box para manejar los tamaños del contenedor principal
 const sxBoxSettings = {
   width: {
-    xs: "90%", // Móviles
-    sm: "80%", // Tablets
+    xs: "95%", // Móviles
+    sm: "90%", // Tablets
     md: "70%", // Laptops pequeñas
     lg: "60%", // Escritorio estándar
     xl: "50%", // Escritorios grandes
@@ -28,14 +26,14 @@ const sxBoxSettings = {
   paddingTop: "20px",
 };
 
-// Creo otra con los valores flex
-
+// Creo otra variable con los valores flex para manejar la distribución en columna en móvil y en fila en escritorio
 const sxFlexBoxSettings = {
   display: "flex",
   flexDirection: { xs: "column", lg: "row" },
-  justifyContent: "space-around", // Separa el carrusel y el texto en la pantalla
-  alignItems: "center", // Centra los elementos en el eje secundario (horizontal)
-  height: "80vh", // Usar todo el espacio disponible en la pantalla
+  justifyContent: { xs: "flex-start", lg: "space-around" }, // Separo el carrusel y el texto en la pantalla
+  alignItems: "center",
+  minHeight: { xs: "auto", lg: "80vh" }, // centro los elementos en modo desktop
+  padding: "20px",
 };
 
 export const OurRestaurant = () => {
@@ -43,28 +41,52 @@ export const OurRestaurant = () => {
   const images = createArrayImagesOurRestaurant(8);
 
   return (
-    <Box sx={{ ...sxBoxSettings, ...sxFlexBoxSettings }}>
-      {/* Creo un Box de Material-UI y le aplico estilos con su propiedad sx y los valores de mi variable para manejar el layout y centrar el carrusel en la página*/}
-      <Box sx={{ ...sxBoxSettings }}>
-        {/* Añado el componente carrusel pasándole las props (array de imágenes y ajustes del carrusel) del componente padre  */}
-        <Carrusel images={images} sliderSettings={sliderSettings} />
-      </Box>
-      <Typography
-        sx={{
-          ...sxBoxSettings,
-          fontFamily: "GreatVibes",
-          fontSize: { xs: "2.4rem", md: "4rem" },
-          alignItems: "flex-end",
+    <Box sx={sxBoxSettings}>
+      {/* FlexBox para manejar la distribución de contenido */}
+      <Box sx={sxFlexBoxSettings}>
+        {/* Carrusel de imágenes */}
+        <Box
+          sx={{
+            width: { xs: "100%", lg: "45%" }, // Carrusel ocupa el 100% en móvil, 45% en escritorio
+            marginBottom: { xs: "20px", lg: "0" }, // Espacio inferior en móviles
+          }}>
+          {/* Añado el componente carrusel pasándole las props (array de imágenes y ajustes del carrusel) del componente padre */}
+          <Carrusel images={images} sliderSettings={sliderSettings} />
+        </Box>
 
-          bottom: { lg: "20px" }, // Ajuste en pantallas grandes
-          right: { lg: "20px" }, // Ajuste en pantallas grandes
-          textAlign: "center",
-        }}
-        variant="h5"
-        align="center"
-        color="primary">
-        "El Arte de Comer Bien"
-      </Typography>
+        {/* Contenedor para el texto y el lema */}
+        <Box
+          sx={{
+            width: { xs: "100%", lg: "45%" }, // Texto ocupa el 100% en móvil, 45% en escritorio
+            textAlign: { xs: "center", lg: "left" }, // Centrado en móvil, alineado a la izquierda en escritorio
+          }}>
+          {/* Lema del restaurante */}
+          <Typography
+            sx={{
+              fontFamily: "GreatVibes",
+              fontSize: { xs: "2rem", md: "3rem" },
+              marginBottom: "20px",
+              color: "primary.main",
+            }}>
+            "El Arte de Comer Bien"
+          </Typography>
+
+          {/* Texto  sobre el restaurante */}
+          <Typography
+            sx={{
+              fontSize: { xs: "1rem", lg: "1.25rem" }, // Ajuste de tamaño para móviles y escritorio
+              color: "primary.main", // Color primary del tema
+            }}>
+            El Elegido es más que un restaurante; es un tributo a la alta cocina
+            y al arte culinario. Desde nuestros inicios, hemos fusionado
+            tradición y modernidad para crear una experiencia gastronómica
+            inigualable. Nuestro equipo de chefs utiliza ingredientes locales y
+            de temporada para elaborar platos que deleitan los sentidos, en un
+            ambiente de lujo y sofisticación. Ven y descubre un lugar donde cada
+            comida se convierte en una obra maestra.
+          </Typography>
+        </Box>
+      </Box>
     </Box>
   );
 };
