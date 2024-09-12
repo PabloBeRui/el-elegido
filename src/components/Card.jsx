@@ -1,6 +1,6 @@
 import { Box, Typography } from "@mui/material";
 import { useState } from "react";
-import "../../css/animations.css";
+import "../css/animations.css";
 import { useTheme } from "@emotion/react";
 
 // Componente reutilizable para crear cards

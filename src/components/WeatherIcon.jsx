@@ -1,4 +1,4 @@
-import { ApiFetch } from "./ApiFetch";
+import { ApiFetch } from "./helpers/ApiFetch";
 
 //iconos de mui del tiempo
 

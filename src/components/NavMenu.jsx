@@ -22,7 +22,7 @@ import FlatwareIcon from "@mui/icons-material/Flatware";
 import { useMediaQuery, useTheme } from "@mui/material";
 
 // Importo el icono del tiempo
-import { WeatherIcon } from "./helpers/WeatherIcon";
+import { WeatherIcon } from "./WeatherIcon";
 
 export const NavMenu = () => {
   // Hook para controlar si el menú está abierto o cerrado.

@@ -1,5 +1,5 @@
 import { Box, Typography } from "@mui/material"; // importo Box de MUI para organizar el layout
-import { Carrusel } from "../helpers/Carrusel.jsx";
+import { Carrusel } from "../Carrusel.jsx";
 import { createArrayImagesOurRestaurant } from "../helpers/createArrayImagesOurRestaurant.js";
 
 // Configuro el carrusel de react-SliderTrack, para ello consigo una configuración predefinida y ajusto ciertos parámetros, con un comentario en cada uno para futuras modificaciones.
