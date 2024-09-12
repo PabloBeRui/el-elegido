@@ -10,17 +10,18 @@
   src: url(/src/components/assets/fonts/GreatVibes-Regular.ttf);
 }
 
-
+@font-face {
+  font-family: "OpenSans";
+  src: url(/src/components/assets/fonts/OpenSans-VariableFont_wdth\,wght.ttf);
+}
 
 * {
   user-select: none;
 }
 
-
-
 body {
   margin: 0;
-  font-family: "Verdana", "Helvetica", "Arial", sans-serif;
+  font-family: "OpenSans", sans-serif; /* Open Sans como fuente predeterminada */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
@@ -28,6 +29,3 @@ body {
   background-image: url(/public/media/images/Global/background_App.jpg);
   background-size: cover;
 }
-
-
-

@@ -74,13 +74,14 @@ export const OurRestaurant = () => {
           {/* Texto  sobre el restaurante */}
           <Typography
             sx={{
-              fontSize: { xs: "1rem", lg: "1.25rem" }, // Ajuste de tamaño para móviles y escritorio
+              fontFamily:"OpenSans",
+              fontSize: { xs: "1rem", md: "1.25rem" }, // Ajuste de tamaño para móviles y escritorio
               color: "primary.main", // Color primary del tema
             }}>
-            El Elegido es más que un restaurante; es un tributo a la alta cocina
-            y al arte culinario. Desde nuestros inicios, hemos fusionado
+            El Elegido es más que un Restaurante; es un tributo a la Alta Cocina
+            y al Arte Culinario. Desde nuestros inicios, hemos fusionado
             tradición y modernidad para crear una experiencia gastronómica
-            inigualable. Nuestro equipo de chefs utiliza ingredientes locales y
+            inigualable. Nuestro equipo de Chefs utiliza ingredientes locales y
             de temporada para elaborar platos que deleitan los sentidos, en un
             ambiente de lujo y sofisticación. Ven y descubre un lugar donde cada
             comida se convierte en una obra maestra.
