@@ -76,7 +76,7 @@ export const Reservations = () => {
           alignItems: "center",
           maxWidth: 600,
           margin: "0 auto",
-          padding: 2,
+          padding: 1,
           border: `1px solid ${theme.palette.secondary.main}`, // Borde secundario
           borderRadius: 2,
           boxShadow: 1,
@@ -85,8 +85,8 @@ export const Reservations = () => {
         <Typography
           sx={{
             textAlign: "center",
-            mt: { xs: 1, md: 2 },
-            mb: 3,
+            mt: { xs: 1, md: 0 },
+            mb: 2,
           }}
           color="secondary"
           fontFamily={"cinzel"}>
@@ -104,24 +104,22 @@ export const Reservations = () => {
             alignItems: "center",
             width: "100%",
             margin: "0 auto",
-            gap: 0.5,
           }}>
           {/* inputProps -> propiedad de MUI para uso de expresiones regulares */}
           <TextField
             name="name"
             label="Nombre"
             type="text"
-            sx={{ mb: 2, display: "block" }}
+            sx={{ mb: { xs: 2, lg: 1 }, display: "block" }}
             required
             inputProps={{ pattern: "^[A-Za-zÁÉÍÓÚáéíóúÑñ ]{2,}$" }} // Al menos 2 letras
-            helperText="Use al menos 2 letras"
             color="secondary"
           />
           <TextField
             name="phone"
             label="Teléfono"
             type="tel"
-            sx={{ mb: 2, display: "block" }}
+            sx={{ mb: { xs: 2, lg: 1 }, display: "block" }}
             required
             color="secondary"
           />
@@ -162,7 +160,7 @@ export const Reservations = () => {
             shouldDisableDate={shouldDisableDate}
             shouldDisableTime={shouldDisableTime}
             renderInput={(params) => (
-              <TextField {...params} sx={{ mt: 4, mb: 4 }} />
+              <TextField {...params} sx={{ mt: 2, mb: 4 }} />
             )}
             color="secondary"
           />
@@ -179,7 +177,7 @@ export const Reservations = () => {
             type="submit"
             variant="contained"
             color="secondary"
-            sx={{ mb: 6, display: "block" }}>
+            sx={{ mb: 3, display: "block" }}>
             Reservar
           </Button>
         </Box>
@@ -188,6 +186,8 @@ export const Reservations = () => {
           sx={{
             textAlign: "center",
             fontSize: { xs: "0.8rem", md: "1rem" },
+            mb: 0,
+            pb: 0,
           }}>
           Martes a Domingo de 12:00 a 18:00 y de 20:00 a 3:00
         </Typography>
