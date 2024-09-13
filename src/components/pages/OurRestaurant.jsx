@@ -18,9 +18,9 @@ const sxBoxSettings = {
   width: {
     xs: "95%", // Móviles
     sm: "90%", // Tablets
-    md: "70%", // Laptops pequeñas
-    lg: "60%", // Escritorio estándar
-    xl: "50%", // Escritorios grandes
+    md: "80%", // Laptops pequeñas
+    lg: "80%", // Escritorio estándar
+    xl: "80%", // Escritorios grandes
   },
   margin: "0 auto",
   paddingTop: "20px",
@@ -30,9 +30,10 @@ const sxBoxSettings = {
 const sxFlexBoxSettings = {
   display: "flex",
   flexDirection: { xs: "column", lg: "row" },
-  justifyContent: { xs: "flex-start", lg: "space-around" }, // Separo el carrusel y el texto en la pantalla
+  justifyContent: { xs: "space-around", lg: "space-between" },
+
   alignItems: "center",
-  minHeight: { xs: "auto", lg: "80vh" }, // centro los elementos en modo desktop
+  minHeight: { xs: "auto", lg: "75vh" }, // centro los elementos en modo desktop
   padding: "20px",
 };
 
@@ -57,6 +58,9 @@ export const OurRestaurant = () => {
         {/* Contenedor para el texto y el lema */}
         <Box
           sx={{
+            display: "flex",
+            flexDirection: "column",
+            gap: "4rem",
             width: { xs: "100%", lg: "45%" }, // Texto ocupa el 100% en móvil, 45% en escritorio
             textAlign: { xs: "center", lg: "left" }, // Centrado en móvil, alineado a la izquierda en escritorio
           }}>
@@ -67,6 +71,8 @@ export const OurRestaurant = () => {
               fontSize: { xs: "2rem", md: "3rem" },
               marginBottom: "20px",
               color: "primary.main",
+              textShadow: "2px 2px 4px rgba(79, 91, 105, 0.7)", //sombreado para mejorar legibilidad con color secondary con transparencia
+              textAlign: { xs: "right", lg: "center" },
             }}>
             "El Arte de Comer Bien"
           </Typography>
@@ -74,8 +80,9 @@ export const OurRestaurant = () => {
           {/* Texto  sobre el restaurante */}
           <Typography
             sx={{
-              fontSize: { xs: "1rem", md: "1.25rem" }, // Ajuste de tamaño para móviles y escritorio
-              color: "primary.main", // Color primary del tema
+              fontSize: { xs: "1rem", md: "1.25rem" },
+              color: "primary.main",
+              textShadow: "2px 2px 4px rgba(79, 91, 105, 0.7)",
             }}>
             El Elegido es más que un Restaurante; es un tributo a la Alta Cocina
             y al Arte Culinario. Desde nuestros inicios, hemos fusionado
