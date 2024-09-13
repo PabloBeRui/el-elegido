@@ -1,9 +1,9 @@
-
 # El Elegido 🍽️
 
 **El Elegido** is a restaurant project that presents a modern and responsive web interface, designed to enhance the user experience. It includes custom components using **React** and **Material-UI**, integrations with **OpenStreetMap** and **EmailJS** for reservations, and a carousel system to highlight main dishes.
 
 ## Demo
+
 You can access the project at the following link: [El Elegido on GitHub](https://github.com/PabloBeRui/el-elegido).
 
 ## Main Features
@@ -15,7 +15,9 @@ You can access the project at the following link: [El Elegido on GitHub](https:/
 - **Date and Time Picker**: Use of `DateTimePicker` from `@mui/x-date-pickers` to manage date and time selection.
 - **Integration with OpenStreetMap**: Use of **React-Leaflet** to show the restaurant's location via OpenStreetMap.
 - **Snackbar for Notifications**: Implementation of temporary notifications with Material-UI's `Snackbar`.
-- **API Key Protection**: Use of Netlify and serverless to protect the project's API keys.
+- **Weather API**: Displays the current weather using custom icons through a free API, with a fallback icon in case of connection issues.
+
+- **API Key Protection**: Use of enviroment variables in Netlify to protect the project's API keys.
 
 ## Technologies Used
 
@@ -52,37 +54,42 @@ You can access the project at the following link: [El Elegido on GitHub](https:/
 ### Installed Dependencies
 
 #### Material-UI
+
 - For UI components:
-   ```bash
-   npm install @mui/material @emotion/react @emotion/styled
-   ```
+  ```bash
+  npm install @mui/material @emotion/react @emotion/styled
+  ```
 - Icons:
-   ```bash
-   npm install @mui/icons-material
-   ```
+  ```bash
+  npm install @mui/icons-material
+  ```
 
 #### Image Carousel
+
 - To implement an interactive carousel:
-   ```bash
-   npm install react-slick slick-carousel
-   ```
+  ```bash
+  npm install react-slick slick-carousel
+  ```
 
 #### DateTimePicker and date handling
-   ```bash
-   npm install @mui/x-date-pickers @mui/lab @mui/material @emotion/react @emotion/styled
-   npm install @mui/x-date-pickers/AdapterDateFns
-   npm install date-fns
-   ```
+
+```bash
+npm install @mui/x-date-pickers @mui/lab @mui/material @emotion/react @emotion/styled
+npm install @mui/x-date-pickers/AdapterDateFns
+npm install date-fns
+```
 
 #### React-Leaflet (OpenStreetMap)
-   ```bash
-   npm install react-leaflet leaflet
-   ```
+
+```bash
+npm install react-leaflet leaflet
+```
 
 #### EmailJS to send confirmation emails
-   ```bash
-   npm install emailjs-com
-   ```
+
+```bash
+npm install emailjs-com
+```
 
 ## Usage
 
@@ -102,8 +109,13 @@ npm run build
 
 ## Images
 
-The images used in the project are sourced from **Unsplash**.
+The images used in the project are sourced from **Unsplash** and **Pexels**.
+
+## Demo
+
+You can access the live site here: [El Elegido on Netlify](https://elelegido.netlify.app/)
+
 
 ## Author
 
-**Pablo Bellón Ruibal**
+**Pablo Bellón Ruibal** [GitHub](https://github.com/PabloBeRui) 👷
