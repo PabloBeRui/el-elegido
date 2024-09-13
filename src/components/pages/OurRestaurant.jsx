@@ -19,8 +19,8 @@ const sxBoxSettings = {
     xs: "95%", // Móviles
     sm: "90%", // Tablets
     md: "80%", // Laptops pequeñas
-    lg: "80%", // Escritorio estándar
-    xl: "80%", // Escritorios grandes
+    lg: "70%", // Escritorio estándar
+    xl: "70%", // Escritorios grandes
   },
   margin: "0 auto",
   paddingTop: "20px",
