@@ -74,7 +74,6 @@ export const OurRestaurant = () => {
           {/* Texto  sobre el restaurante */}
           <Typography
             sx={{
-              fontFamily:"OpenSans",
               fontSize: { xs: "1rem", md: "1.25rem" }, // Ajuste de tamaño para móviles y escritorio
               color: "primary.main", // Color primary del tema
             }}>
