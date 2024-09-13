@@ -2,17 +2,17 @@
 
 @font-face {
   font-family: "Cinzel";
-  src: url(/src/components/assets/fonts/Cinzel-VariableFont_wght.ttf);
+  src: url(/src/assets/fonts/Cinzel-VariableFont_wght.ttf);
 }
 
 @font-face {
   font-family: "GreatVibes";
-  src: url(/src/components/assets/fonts/GreatVibes-Regular.ttf);
+  src: url(/src/assets/fonts/GreatVibes-Regular.ttf);
 }
 
 @font-face {
   font-family: "OpenSans";
-  src: url(/src/components/assets/fonts/OpenSans-VariableFont_wdth\,wght.ttf);
+  src: url(/src/assets/fonts/OpenSans-VariableFont_wdth\,wght.ttf);
 }
 
 * {
@@ -21,7 +21,7 @@
 
 body {
   margin: 0;
- 
+
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
