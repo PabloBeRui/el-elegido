@@ -19,8 +19,8 @@ const sxBoxSettings = {
     xs: "95%", // Móviles
     sm: "90%", // Tablets
     md: "80%", // Laptops pequeñas
-    lg: "70%", // Escritorio estándar
-    xl: "70%", // Escritorios grandes
+    lg: "75%", // Escritorio estándar
+    xl: "75%", // Escritorios grandes
   },
   margin: "0 auto",
   paddingTop: "20px",
@@ -60,7 +60,7 @@ export const OurRestaurant = () => {
           sx={{
             display: "flex",
             flexDirection: "column",
-            gap: "4rem",
+            gap: { xs: "4rem", lg: "1rem" },
             width: { xs: "100%", lg: "45%" }, // Texto ocupa el 100% en móvil, 45% en escritorio
             textAlign: { xs: "center", lg: "left" }, // Centrado en móvil, alineado a la izquierda en escritorio
           }}>
@@ -80,7 +80,7 @@ export const OurRestaurant = () => {
           {/* Texto  sobre el restaurante */}
           <Typography
             sx={{
-              fontSize: { xs: "1rem", md: "1.25rem" },
+              fontSize: { xs: "1rem", md: "1.2rem" },
               color: "primary.main",
               textShadow: "2px 2px 4px rgba(79, 91, 105, 0.7)",
             }}>

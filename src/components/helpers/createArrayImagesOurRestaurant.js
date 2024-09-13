@@ -5,7 +5,7 @@ export const createArrayImagesOurRestaurant = (img) => {
   const route = "/media/images/OurRestaurantGallery/";
 
   for (let i = 1; i <= img; i++) {
-    arrayImg.push(`${route}${i}.png`);
+    arrayImg.push(`${route}${i}.webp`);
   }
 
   return arrayImg;
