@@ -4,7 +4,7 @@
 export const sliderSettings = {
   dots: true, // Muestra los puntos de navegación en la parte inferior del carrusel
   infinite: true, // Permite que el carrusel se desplace en un bucle infinito
-  speed: 400, // Velocidad de transición entre las imágenes (en milisegundos)
+  speed: 500, // Velocidad de transición entre las imágenes (en milisegundos)
   slidesToShow: 1, // Número de imágenes visibles a la vez (en este caso, una imagen por vez)
   slidesToScroll: 1, // Número de imágenes que se desplazarán cuando se navegue en el carrusel
   autoplay: true, // Habilita el desplazamiento automático de las imágenes
@@ -30,6 +30,5 @@ export const sxFlexBoxSettings = {
   flexDirection: { xs: "column", lg: "row" },
   justifyContent: { xs: "space-around", lg: "space-between" },
   alignItems: "center",
-  minHeight: { xs: "auto", lg: "65vh" },
-  padding: "3rem",
+  minHeight: { xs: "auto", lg: "65vh", xl: "80vh" },
 };

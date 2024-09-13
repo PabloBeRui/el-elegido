@@ -30,11 +30,12 @@ export const OurLocation = () => {
         flexDirection: "column",
         justifyContent: "center",
         alignItems: "center",
-        height: "80dvh",
+        height: {xs:"75dvh",md:"80dvh"},
         width: "90dvw",
         maxWidth: "800px",
         margin: "auto",
-        borderRadius: "1000px",
+        
+       
       }}>
       {/* Box adicional para borderRadius */}
       <Box
@@ -44,6 +45,7 @@ export const OurLocation = () => {
           borderRadius: "30px", // Aplica un borde redondeado
           overflow: "hidden", // Evita que el contenido sobresalga del borde redondeado
           margin: "auto",
+          backgroundColor: "rgba(255, 255, 255, 0.8)"
         }}>
         {/* // MapContainer crea el contenedor del mapa. La propiedad center define la posición inicial del mapa */}
         <MapContainer

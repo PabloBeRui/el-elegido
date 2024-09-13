@@ -62,7 +62,7 @@ export const OurRestaurant = () => {
             inigualable. Nuestro equipo de Chefs utiliza ingredientes locales y
             de temporada para elaborar platos que deleitan los sentidos, en un
             ambiente de lujo y sofisticación. Ven y descubre un lugar donde cada
-            comida se convierte en una obra maestra.
+            comida se convierte en una obra de Arte.
           </Typography>
         </Box>
       </Box>
