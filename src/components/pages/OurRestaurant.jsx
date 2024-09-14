@@ -21,7 +21,7 @@ export const OurRestaurant = () => {
         <Box
           sx={{
             width: { xs: "100%", lg: "45%" }, // Carrusel ocupa el 100% en móvil, 45% en escritorio
-            marginBottom: { xs: "20px", lg: "0" }, // Espacio inferior en móviles
+            marginBottom: { xs: "10px", lg: "0" }, // Espacio inferior en móviles
           }}>
           {/* Añado el componente carrusel pasándole las props (array de imágenes y ajustes del carrusel) del componente padre */}
           <Carrusel images={images} sliderSettings={sliderSettings} />
@@ -55,6 +55,7 @@ export const OurRestaurant = () => {
               fontSize: { xs: "1rem", md: "1.2rem" },
               color: "primary.main",
               textShadow: "2px 2px 4px rgba(79, 91, 105, 0.7)",
+              mb: { xs: "1rem", lg: "0" },
             }}>
             El Elegido es más que un Restaurante; es un tributo a la Alta Cocina
             y al Arte Culinario. Desde nuestros inicios, hemos fusionado
