@@ -126,6 +126,9 @@ export const Reservations = () => {
             label="Teléfono"
             type="tel"
             sx={{ mb: { xs: 2, lg: 1 }, display: "block" }}
+            inputProps={{
+              pattern: "^\\+?\\d{7,14}$",
+            }} // Patrón para aceptar entre 7 y 14 dígitos, con o sin "+"
             required
             color="secondary"
           />
@@ -133,6 +136,9 @@ export const Reservations = () => {
             name="email"
             label="Email"
             type="email"
+            inputProps={{
+              pattern: "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$",
+            }}
             sx={{ mb: 2, display: "block" }}
             color="secondary"
           />
