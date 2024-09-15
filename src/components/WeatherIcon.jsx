@@ -1,12 +1,14 @@
 import { ApiFetch } from "./helpers/ApiFetch";
 
-//iconos de mui del tiempo
+//iconos importados  del del tiempo
 
-import WbSunnyIcon from "@mui/icons-material/WbSunny";
-import CloudIcon from "@mui/icons-material/Cloud";
-import GrainIcon from "@mui/icons-material/Grain";
-import AcUnitIcon from "@mui/icons-material/AcUnit";
-import ThunderstormIcon from "@mui/icons-material/Thunderstorm";
+// Importamos los iconos de la carpeta assets/icons/weatherIcons
+import ThunderstormIcon from "../assets/icons/weatherIcons/thunderstorm.png";
+import DrizzleIcon from "../assets/icons/weatherIcons/drizzle.png";
+import RainIcon from "../assets/icons/weatherIcons/rain.png";
+import SnowIcon from "../assets/icons/weatherIcons/snow.png";
+import ClearIcon from "../assets/icons/weatherIcons/clear.png";
+import CloudIcon from "../assets/icons/weatherIcons/cloud.png";
 import { Box, Tooltip } from "@mui/material";
 
 //Api Key almacenada como variable de entorno
@@ -19,6 +21,8 @@ export const WeatherIcon = () => {
     `https://api.openweathermap.org/data/2.5/weather?lat=43.3685&lon=-8.4181&appid=${appid}`
   );
 
+  
+
   //id del clima
   // Comprobamos si `data` y `data.weather` existen con optional chaining, en caso contrario mostramos el ícono por defecto
   const weatherId = data?.weather?.[0]?.id || null;
@@ -26,43 +30,18 @@ export const WeatherIcon = () => {
   //icono segun id, aplico tooltip propio de mui para
   const getWeatherIcon = (weatherId) => {
     if (weatherId >= 200 && weatherId <= 232) {
-      return (
-        <Tooltip title="Hoy hay tormenta">
-          <ThunderstormIcon />
-        </Tooltip>
-      ); // Tormenta
+      return <img src={ThunderstormIcon} alt="Tormenta" title="Tormenta" width="24" />; // Tormenta
     } else if (weatherId >= 300 && weatherId <= 321) {
-      return (
-        <Tooltip title="Hoy hay un poco de llovizna">
-          <GrainIcon />
-        </Tooltip>
-      ); // Llovizna
+      return <img src={DrizzleIcon} alt="Llovizna" title="Llovizna" width="24" />; // Llovizna
     } else if (weatherId >= 500 && weatherId <= 531) {
-      return (
-        <Tooltip title="Hoy está lloviendo">
-          <GrainIcon />
-        </Tooltip>
-      ); // Lluvia
+      return <img src={RainIcon} alt="Lluvia" title="Lluvia" width="24" />; // Lluvia
     } else if (weatherId >= 600 && weatherId <= 622) {
-      return (
-        <Tooltip title="Hoy está nevado">
-          <AcUnitIcon />
-        </Tooltip>
-      ); // Nieve
+      return <img src={SnowIcon} alt="Nieve" title="Nieve" width="24" />; // Nieve
     } else if (weatherId === 800) {
-      return (
-        <Tooltip title="Hoy el cielo está despejado">
-          <WbSunnyIcon />
-        </Tooltip>
-      ); // Cielo despejado
+      return <img src={ClearIcon} alt="Cielo despejado" title="Cielo despejado" width="24" />; // Cielo despejado
     } else if (weatherId >= 801 && weatherId <= 804) {
-      return (
-        <Tooltip title="Hoy está Nublado">
-          <CloudIcon />
-        </Tooltip>
-      ); // Nublado
+      return <img src={CloudIcon} alt="Nublado" width="24" />; // Nublado
     } else {
-      // Si hay algún problema en la carga del tiempo, muestra icono del restuarante por defecto
       return (
         <Tooltip title="El Elegido te da la bienvenida">
           <Box
